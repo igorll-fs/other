@@ -1062,6 +1062,139 @@ button {
   }
 }
 
+/* Events Section */
+.events-section {
+  padding: 6rem 2rem;
+  background: radial-gradient(circle at 50% 0%, #1a0f30 0%, var(--bg-dark) 70%);
+}
+
+.events-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.event-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.event-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, var(--neon-pink), var(--neon-purple));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-8px);
+  background: var(--bg-card-hover);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5), 0 0 20px rgba(255, 0, 127, 0.1);
+}
+
+.event-card:hover::before {
+  opacity: 1;
+}
+
+.event-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.event-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Bowling Section */
+.bowling-section {
+  padding: 6rem 2rem;
+  background: var(--bg-dark);
+}
+
+.bowling-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bowling-features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.bowling-feature {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 50px;
+  padding: 0.8rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.bowling-feature:hover {
+  background: var(--bg-card-hover);
+  border-color: rgba(0, 240, 255, 0.2);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
+}
+
+.bowling-feature-icon {
+  font-size: 1.5rem;
+}
+
+.bowling-feature span:last-child {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.bowling-cta {
+  text-align: center;
+}
+
+/* Responsive for new sections */
+@media (max-width: 768px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .bowling-features {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 /* Footer */
 .footer {
   background: #040308;

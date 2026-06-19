@@ -18,7 +18,9 @@ import {
   ChevronLeft, 
   ChevronRight, 
   UtensilsCrossed,
-  ArrowRight
+  ArrowRight,
+  PartyPopper,
+  Truck
 } from 'lucide-react'
 
 function App() {
@@ -29,14 +31,14 @@ function App() {
 
   // Highlights
   const highlights = [
-    { icon: <Zap className="glow-cyan-text" size={32} />, title: "Boliche Interativo", desc: "A primeira pista 100% interativa de Santa Catarina com efeitos visuais incríveis na pista.", highlighted: true },
-    { icon: <Pizza className="text-pink-500" size={32} />, title: "Pizza Artesanal", desc: "Massa fermentada lentamente e ingredientes selecionados assados na perfeição." },
-    { icon: <Beer className="text-yellow-500" size={32} />, title: "Chopp Gelado", desc: "Variedade de chopps locais trincando para brindar com amigos." },
-    { icon: <Gamepad2 className="text-purple-500" size={32} />, title: "Arcade/Flipperama", desc: "Espaço retrô com games clássicos que marcaram gerações." },
-    { icon: <Baby className="text-emerald-500" size={32} />, title: "Espaço Kids", desc: "Área segura e divertida para as crianças brincarem à vontade." },
-    { icon: <Music className="text-blue-500" size={32} />, title: "Música ao Vivo", desc: "Programação especial semanal trazendo os melhores artistas regionais." },
-    { icon: <Martini className="text-rose-500" size={32} />, title: "Drinks Autorais", desc: "Combinações exclusivas e drinks clássicos preparados pelos nossos bartenders." },
-    { icon: <Bike className="text-teal-500" size={32} />, title: "Delivery Rápido", desc: "Nossos deliciosos burgers e pizzas quentinhos no conforto da sua casa." }
+    { icon: <Zap className="glow-cyan-text" size={32} />, title: "Boliche 100% Interativo", desc: "6 pistas Discovery Bowl® com projeção imersiva, alvos LED, painéis touchscreen e efeitos especiais. O primeiro boliche interativo de Santa Catarina!", highlighted: true },
+    { icon: <Pizza className="text-pink-500" size={32} />, title: "Pizza Artesanal", desc: "Massa fermentada lentamente, assada no forno a lenha. De 25cm a 45cm. Promo: Pizza Grande R$59,90 nas segundas e terças!" },
+    { icon: <Beer className="text-yellow-500" size={32} />, title: "Chopp & Drinks", desc: "Chopp geladinho, drinks autorais exclusivos, cervejas nacionais e importadas. Bar completo para brindar com amigos." },
+    { icon: <Gamepad2 className="text-purple-500" size={32} />, title: "Arcade & Fliperama", desc: "Espaço retrô com jogos clássicos, simuladores de corrida e muito mais. Diversão garantida entre uma partida e outra!" },
+    { icon: <Baby className="text-emerald-500" size={32} />, title: "Espaço Kids", desc: "Área exclusiva e segura para as crianças brincarem à vontade. Diversão para toda a família!" },
+    { icon: <Music className="text-blue-500" size={32} />, title: "Música Ao Vivo", desc: "Programação especial com artistas regionais. Venha curtir boa música enquanto saboreia nossos pratos e drinks!" },
+    { icon: <PartyPopper className="text-rose-500" size={32} />, title: "Eventos & Aniversários", desc: "Espaço ideal para eventos corporativos e aniversários. Aniversariantes da semana ganham petit gateau de presente!" },
+    { icon: <Truck className="text-teal-500" size={32} />, title: "Delivery Próprio", desc: "Peça pelo nosso delivery via Goomer ou WhatsApp. Hambúrgueres, pizzas e porções chegam quentinhos na sua casa!" }
   ]
 
   // Menu Data
@@ -48,6 +50,12 @@ function App() {
       { id: 4, title: "The Double One", price: "R$ 53,90", desc: "Dois blends suculentos de 180g (total 360g de carne), queijo cheddar duplo e maionese artesanal da casa.", image: "/photos/menu/The_Double_One.jpg", tag: "Super Fome" },
       { id: 5, title: "The Chicken Crispy", price: "R$ 42,90", desc: "Filé de frango super empanado e crocante, cheddar cremoso, alface fresco e molho leve da casa.", image: "/photos/menu/The_Chicken_Crispy.jpg", tag: "Novidade" }
     ],
+    tradicionais: [
+      { id: 20, title: "X-Burguer", price: "R$ 20,00", desc: "Hambúrguer simples com queijo derretido no pão brioche. O clássico que nunca sai de moda.", image: null, tag: "Clássico" },
+      { id: 21, title: "X-Salada", price: "R$ 25,00", desc: "Hambúrguer com queijo, alface, tomate e maionese. Frescor e sabor em cada mordida.", image: null, tag: "Fresquinho" },
+      { id: 22, title: "X-Bacon", price: "R$ 28,00", desc: "Hambúrguer com queijo e bacon crocante. O sabor defumado do bacon premium faz toda a diferença.", image: null, tag: "Crocante" },
+      { id: 23, title: "X-Especial", price: "R$ 32,00", desc: "Hambúrguer com queijo, bacon, ovo, presunto, alface e tomate. O completo para quem tem fome!", image: null, tag: "Completo" }
+    ],
     pizzas: [
       { id: 6, title: "Pizza Pequena (25cm)", price: "R$ 38,00", desc: "Tamanho perfeito para matar a sua fome individual. 4 fatias generosas com os sabores tradicionais ou doces.", image: "/photos/menu/Pizza_Media_30cm.jpg", tag: "Individual" },
       { id: 7, title: "Pizza Média (30cm)", price: "R$ 55,00", desc: "Ideal para compartilhar em duas pessoas. 8 fatias com até 2 sabores de sua preferência.", image: "/photos/menu/Pizza_Media_30cm.jpg", tag: "Mais Pedida" },
@@ -57,9 +65,25 @@ function App() {
       { id: 9, title: "Mini Pastéis (12 un)", price: "R$ 33,00", desc: "Cesta de mini pastéis super crocantes e recheados na hora. Opções de carne, queijo e chocolate.", image: null, tag: "Para Compartilhar" },
       { id: 10, title: "Batata Frita Tradicional", price: "R$ 30,00", desc: "Porção de batatas fritas super crocantes por fora e macias por dentro, salpicadas com tempero especial.", image: null, tag: "Clássico" },
       { id: 11, title: "Batata Frita Rústica", price: "R$ 34,50", desc: "Batatas fritas rústicas com casca, temperadas com alecrim fresco e alho confitado, acompanhadas de maionese defumada.", image: null, tag: "Especial" },
-      { id: 12, title: "Anel de Cebola (Onion Rings)", price: "R$ 34,50", desc: "Anéis de cebola gigantes empanados em farinha panko super crocante, acompanhados de barbecue.", image: null, tag: "Sucesso" },
+      { id: 12, title: "Anel de Cebola (Onion Rings)", price: "R$ 34,50", desc: "Anéis de cebola gigantes empanados em farinha panko super crocante, acompanhados de barbecue.", image: null, tag: "Sucesso" }
+    ],
+    porcoes: [
       { id: 13, title: "Porção Mista", price: "R$ 122,50", desc: "A porção definitiva de boteco: alcatra em tiras grelhada, calabresa acebolada, coração de frango e cubos de frango crocante.", image: null, tag: "Completa" },
-      { id: 14, title: "Porção de Alcatra", price: "R$ 49,00", desc: "Alcatra premium em tiras grelhada na chapa com cebola e pimentão, servida bem quente com farofa.", image: null, tag: "Carne Grelhada" }
+      { id: 14, title: "Porção de Alcatra", price: "R$ 49,00", desc: "Alcatra premium em tiras grelhada na chapa com cebola e pimentão, servida bem quente com farofa.", image: null, tag: "Carne Grelhada" },
+      { id: 24, title: "Porção de Calabresa", price: "R$ 46,50", desc: "Calabresa fatiada grelhada com cebola caramelizada. Acompanha farofa e molho especial.", image: null, tag: "Boteco" },
+      { id: 25, title: "Frango à Passarinho", price: "R$ 42,00", desc: "Pedaços de frango temperados e fritos até ficarem dourados e crocantes. Perfeito para compartilhar.", image: null, tag: "Para Dividir" },
+      { id: 26, title: "Porção de Batata com Cheddar e Bacon", price: "R$ 45,00", desc: "Batatas fritas crocantes cobertas com cheddar cremoso e bacon crocante. Irresistível!", image: null, tag: "Imperdível" }
+    ],
+    pasteis: [
+      { id: 27, title: "Pastel de Carne", price: "R$ 20,00", desc: "Pastel crocante recheado com carne moída temperada com cebola e azeitona.", image: null, tag: "Tradicional" },
+      { id: 28, title: "Pastel de Queijo", price: "R$ 18,00", desc: "Pastel crocante recheado com queijo derretido. Simples, mas irresistível.", image: null, tag: "Clássico" },
+      { id: 29, title: "Pastel Especial de Carne Seca", price: "R$ 27,00", desc: "Pastel artesanal recheado com carne seca desfiada e catupiry cremoso.", image: null, tag: "Especial" },
+      { id: 30, title: "Pastel de Chocolate", price: "R$ 15,00", desc: "Pastel doce crocante recheado com chocolate derretido. A sobremesa perfeita!", image: null, tag: "Doce" }
+    ],
+    frutosdomar: [
+      { id: 31, title: "Isca de Peixe", price: "R$ 103,50", desc: "Iscas de peixe empanadas e fritas, crocantes por fora e macias por dentro. Acompanha molho tártaro.", image: null, tag: "Frito" },
+      { id: 32, title: "Camarão Empanado", price: "R$ 119,00", desc: "Camarões grandes empanados e fritos até ficarem dourados. Acompanha molho rosé.", image: null, tag: "Premium" },
+      { id: 33, title: "Lula Frita", price: "R$ 119,00", desc: "Anéis de lula empanados em farinha panko e fritos. Crocantes e saborosos, acompanham molho especial.", image: null, tag: "Especial" }
     ],
     bebidas: [
       { id: 15, title: "Gin de Morango", price: "Consulte", desc: "Drink refrescante de gin artesanal premium, xarope de morangos selecionados, água tônica e especiarias.", image: "/photos/drinks/gin-morango.jpg", tag: "Exclusivo" },
@@ -157,6 +181,7 @@ function App() {
             <li><a href="#boliche" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Boliche</a></li>
             <li><a href="#destaques" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Diferenciais</a></li>
             <li><a href="#cardapio" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Cardápio</a></li>
+            <li><a href="#eventos" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Eventos</a></li>
             <li><a href="#avaliacoes" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Avaliações</a></li>
             <li><a href="#contato" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Contato</a></li>
           </ul>
@@ -269,26 +294,29 @@ function App() {
       <section id="boliche" className="promo-section">
         <div className="promo-container">
           <div>
-            <span className="promo-tag">Destaque Exclusivo</span>
-            <h2 className="promo-title glow-pink-text">Pista Interativa & Sabores Sensacionais</h2>
+            <span className="promo-tag">Experiência Única</span>
+            <h2 className="promo-title glow-pink-text">Boliche Interativo Discovery Bowl®</h2>
             <p className="promo-desc">
-              Que tal o melhor dos dois mundos? Nossas pistas contam com sensores que reagem à trajetória da bola, criando animações dinâmicas sobre a madeira. E para acompanhar a jogada, peça nossos combos especiais de boliche e cardápio na hora.
+              6 pistas com tecnologia de ponta: projeção imersiva na superfície da pista, 
+              alvos LED nos protetores, painéis touchscreen de última geração e efeitos especiais 
+              que transformam cada jogada em um espetáculo visual. O primeiro boliche 100% interativo de Santa Catarina!
             </p>
             <div className="promo-price-box">
               <div>
-                <p className="promo-price-label">Ideal para casais ou amigos</p>
-                <p className="promo-price">Pizza + Boliche</p>
+                <p className="promo-price-label">A partir de</p>
+                <p className="promo-price">R$ 125/hora</p>
+                <p className="promo-price-label">por pista (até 6 pessoas)</p>
               </div>
             </div>
             <button 
               className="cta-button"
-              onClick={() => contactWhatsApp("Olá! Gostaria de saber mais sobre os valores das pistas e combos de pizza + boliche.")}
+              onClick={() => contactWhatsApp("Olá! Gostaria de saber os valores e disponibilidade das pistas de boliche.")}
             >
-              Consultar Valores & Reservar <ArrowRight size={16} />
+              Consultar Disponibilidade <ArrowRight size={16} />
             </button>
           </div>
           <div className="promo-image-wrapper">
-            <img src="/photos/promo/bowling-interactive.jpg" alt="Combo Especial de Pizza e Boliche" />
+            <img src="/photos/promo/bowling-interactive.jpg" alt="Boliche Interativo Discovery Bowl" />
           </div>
         </div>
       </section>
@@ -303,30 +331,14 @@ function App() {
           </div>
 
           <div className="menu-tabs">
-            <button 
-              className={`menu-tab-btn ${activeTab === 'burgers' ? 'active' : ''}`}
-              onClick={() => setActiveTab('burgers')}
-            >
-              The Ones (Burgers)
-            </button>
-            <button 
-              className={`menu-tab-btn ${activeTab === 'pizzas' ? 'active' : ''}`}
-              onClick={() => setActiveTab('pizzas')}
-            >
-              Pizzas
-            </button>
-            <button 
-              className={`menu-tab-btn ${activeTab === 'entradas' ? 'active' : ''}`}
-              onClick={() => setActiveTab('entradas')}
-            >
-              Entradas & Porções
-            </button>
-            <button 
-              className={`menu-tab-btn ${activeTab === 'bebidas' ? 'active' : ''}`}
-              onClick={() => setActiveTab('bebidas')}
-            >
-              Bebidas & Drinks
-            </button>
+            <button className={`menu-tab-btn ${activeTab === 'burgers' ? 'active' : ''}`} onClick={() => setActiveTab('burgers')}>The Ones</button>
+            <button className={`menu-tab-btn ${activeTab === 'tradicionais' ? 'active' : ''}`} onClick={() => setActiveTab('tradicionais')}>Tradicionais</button>
+            <button className={`menu-tab-btn ${activeTab === 'pizzas' ? 'active' : ''}`} onClick={() => setActiveTab('pizzas')}>Pizzas</button>
+            <button className={`menu-tab-btn ${activeTab === 'entradas' ? 'active' : ''}`} onClick={() => setActiveTab('entradas')}>Entradas</button>
+            <button className={`menu-tab-btn ${activeTab === 'porcoes' ? 'active' : ''}`} onClick={() => setActiveTab('porcoes')}>Porções</button>
+            <button className={`menu-tab-btn ${activeTab === 'pasteis' ? 'active' : ''}`} onClick={() => setActiveTab('pasteis')}>Pastéis</button>
+            <button className={`menu-tab-btn ${activeTab === 'frutosdomar' ? 'active' : ''}`} onClick={() => setActiveTab('frutosdomar')}>Frutos do Mar</button>
+            <button className={`menu-tab-btn ${activeTab === 'bebidas' ? 'active' : ''}`} onClick={() => setActiveTab('bebidas')}>Bebidas</button>
           </div>
 
           <div className="menu-grid">
@@ -355,6 +367,69 @@ function App() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Events Section */}
+      <section id="eventos" className="events-section">
+        <div className="events-container">
+          <div className="section-header">
+            <span className="section-tag">Eventos</span>
+            <h2 className="section-title glow-pink-text">Celebre na Other</h2>
+            <p className="section-desc">Espaço completo para aniversários, eventos corporativos e confraternizações. Surpreenda seus convidados!</p>
+          </div>
+          <div className="events-grid">
+            <div className="event-card">
+              <div className="event-icon">🎂</div>
+              <h3>Aniversários</h3>
+              <p>Faça sua festa com boliche interativo, gastronomia premium e drinks exclusivos. Aniversariantes da semana ganham petit gateau!</p>
+              <button className="cta-button" onClick={() => contactWhatsApp("Olá! Gostaria de fazer uma festa de aniversário no Other.")}>Reservar Festa</button>
+            </div>
+            <div className="event-card">
+              <div className="event-icon">🏢</div>
+              <h3>Corporativo</h3>
+              <p>Team building, confraternizações e eventos corporativos em um ambiente único. Espaço exclusivo para grupos.</p>
+              <button className="cta-button" onClick={() => contactWhatsApp("Olá! Gostaria de fazer um evento corporativo no Other.")}>Solicitar Proposta</button>
+            </div>
+            <div className="event-card">
+              <div className="event-icon">🎯</div>
+              <h3>Grupos</h3>
+              <p>Amigos, família ou qualquer ocasião especial. Reserve pistas, aproveite a gastronomia e divirta-se!</p>
+              <button className="cta-button" onClick={() => contactWhatsApp("Olá! Gostaria de reservar para um grupo no Other.")}>Reservar Mesa</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Bowling Section */}
+      <section id="pistas" className="bowling-section">
+        <div className="bowling-container">
+          <div className="section-header">
+            <span className="section-tag">Boliche</span>
+            <h2 className="section-title glow-cyan-text">Pistas Interativas</h2>
+            <p className="section-desc">6 pistas Discovery Bowl® com tecnologia de projeção imersiva. A partir de R$125/hora por pista (até 6 pessoas).</p>
+          </div>
+          <div className="bowling-features">
+            <div className="bowling-feature">
+              <span className="bowling-feature-icon">📽️</span>
+              <span>Projeção Imersiva</span>
+            </div>
+            <div className="bowling-feature">
+              <span className="bowling-feature-icon">🎯</span>
+              <span>Alvos LED</span>
+            </div>
+            <div className="bowling-feature">
+              <span className="bowling-feature-icon">🖥️</span>
+              <span>Touchscreen</span>
+            </div>
+            <div className="bowling-feature">
+              <span className="bowling-feature-icon">🌫️</span>
+              <span>Efeitos Especiais</span>
+            </div>
+          </div>
+          <div className="bowling-cta">
+            <button className="cta-button" onClick={() => contactWhatsApp("Olá! Gostaria de saber os valores e disponibilidade das pistas de boliche.")}>Consultar Disponibilidade</button>
           </div>
         </div>
       </section>
@@ -439,11 +514,11 @@ function App() {
                   <tbody>
                     <tr>
                       <td>Terça a Sábado</td>
-                      <td>18:00 — 00:00</td>
+                      <td>18h — 00h</td>
                     </tr>
                     <tr>
                       <td>Domingo</td>
-                      <td>17:00 — 23:00</td>
+                      <td>17h — 23h</td>
                     </tr>
                     <tr>
                       <td>Segunda-feira</td>
@@ -460,7 +535,7 @@ function App() {
               </div>
               <div className="info-details">
                 <h3>Reservas & Eventos</h3>
-                <p>WhatsApp: <strong>(48) 99818-4413</strong></p>
+                <p>Fixo: <strong>(48) 3263-2478</strong> · WhatsApp: <strong>(48) 99818-4413</strong></p>
                 <p style={{ fontSize: '0.9rem', marginTop: '0.2rem' }}>Dica: Faça sua reserva antecipada para evitar filas no boliche.</p>
               </div>
             </div>
@@ -517,6 +592,7 @@ function App() {
                   <li><a href="#boliche">Boliche</a></li>
                   <li><a href="#destaques">Diferenciais</a></li>
                   <li><a href="#cardapio">Cardápio</a></li>
+                  <li><a href="#eventos">Eventos</a></li>
                   <li><a href="#avaliacoes">Avaliações</a></li>
                 </ul>
               </div>
