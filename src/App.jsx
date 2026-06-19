@@ -1,391 +1,544 @@
-import { useState, useEffect, useRef } from 'react';
-import {
-  Star, MapPin, Clock, Phone, ChevronLeft, ChevronRight,
-  Utensils, Music, Gamepad2, Baby, Truck, Beer, Flame, Pizza
-} from 'lucide-react';
+import { useState, useEffect, useRef } from 'react'
+import { 
+  Pizza, 
+  Beer, 
+  Gamepad2, 
+  Music, 
+  Baby, 
+  Martini, 
+  Bike, 
+  Zap, 
+  Star, 
+  MapPin, 
+  Phone, 
+  Clock,
+  Camera as Instagram,
+  Menu,
+  X, 
+  ChevronLeft, 
+  ChevronRight, 
+  UtensilsCrossed,
+  ArrowRight
+} from 'lucide-react'
 
-export default function App() {
-  const [data, setData] = useState(null);
-  const [menuTab, setMenuTab] = useState('The Ones (Burgers)');
-  const [reviewIdx, setReviewIdx] = useState(0);
-  const menuRef = useRef(null);
+function App() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [activeTab, setActiveTab] = useState('burgers')
+  const [activeReviewIndex, setActiveReviewIndex] = useState(0)
+  const scrollerRef = useRef(null)
 
-  useEffect(() => {
-    fetch('/data.json')
-      .then((r) => r.json())
-      .then(setData)
-      .catch(console.error);
-  }, []);
+  // Highlights
+  const highlights = [
+    { icon: <Zap className="glow-cyan-text" size={32} />, title: "Boliche Interativo", desc: "A primeira pista 100% interativa de Santa Catarina com efeitos visuais incríveis na pista.", highlighted: true },
+    { icon: <Pizza className="text-pink-500" size={32} />, title: "Pizza Artesanal", desc: "Massa fermentada lentamente e ingredientes selecionados assados na perfeição." },
+    { icon: <Beer className="text-yellow-500" size={32} />, title: "Chopp Gelado", desc: "Variedade de chopps locais trincando para brindar com amigos." },
+    { icon: <Gamepad2 className="text-purple-500" size={32} />, title: "Arcade/Flipperama", desc: "Espaço retrô com games clássicos que marcaram gerações." },
+    { icon: <Baby className="text-emerald-500" size={32} />, title: "Espaço Kids", desc: "Área segura e divertida para as crianças brincarem à vontade." },
+    { icon: <Music className="text-blue-500" size={32} />, title: "Música ao Vivo", desc: "Programação especial semanal trazendo os melhores artistas regionais." },
+    { icon: <Martini className="text-rose-500" size={32} />, title: "Drinks Autorais", desc: "Combinações exclusivas e drinks clássicos preparados pelos nossos bartenders." },
+    { icon: <Bike className="text-teal-500" size={32} />, title: "Delivery Rápido", desc: "Nossos deliciosos burgers e pizzas quentinhos no conforto da sua casa." }
+  ]
 
-  if (!data) {
-    return (
-      <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center">
-        <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin" />
-      </div>
-    );
+  // Menu Data
+  const menuData = {
+    burgers: [
+      { id: 1, title: "The Classic", price: "R$ 39,90", desc: "Blend suculento de 180g, queijo cheddar derretido e nossa exclusiva maionese defumada no pão brioche macio.", image: "/photos/menu/The_Classic.jpg", tag: "Campeão de Vendas" },
+      { id: 2, title: "The Cheese One", price: "R$ 48,90", desc: "Blend suculento de 180g, dobro de queijo cheddar derretido, molho especial artesanal no pão brioche tostado.", image: "/photos/menu/The_Cheese_One.jpg", tag: "Muito Queijo" },
+      { id: 3, title: "The Bacon One", price: "R$ 44,90", desc: "Blend suculento de 180g, fatias crocantes de bacon premium, cheddar derretido e maionese defumada.", image: "/photos/menu/The_Bacon_One.jpg", tag: "Crocante" },
+      { id: 4, title: "The Double One", price: "R$ 53,90", desc: "Dois blends suculentos de 180g (total 360g de carne), queijo cheddar duplo e maionese artesanal da casa.", image: "/photos/menu/The_Bacon_One.jpg", tag: "Super Fome" },
+      { id: 5, title: "The Chicken Crispy", price: "R$ 42,90", desc: "Filé de frango super empanado e crocante, cheddar cremoso, alface fresco e molho leve da casa.", image: "/photos/menu/The_Classic.jpg", tag: "Novidade" }
+    ],
+    pizzas: [
+      { id: 6, title: "Pizza Pequena (25cm)", price: "R$ 38,00", desc: "Tamanho perfeito para matar a sua fome individual. 4 fatias generosas com os sabores tradicionais ou doces.", image: "/photos/instagram/bowling_pool.jpg", tag: "Individual" },
+      { id: 7, title: "Pizza Média (30cm)", price: "R$ 55,00", desc: "Ideal para compartilhar em duas pessoas. 8 fatias com até 2 sabores de sua preferência.", image: "/photos/instagram/bowling_pool.jpg", tag: "Mais Pedida" },
+      { id: 8, title: "Pizza Grande (35cm)", price: "R$ 80,00", desc: "Perfeita para a família ou o grupo de boliche. 12 fatias gigantes com até 3 sabores diferentes.", image: "/photos/instagram/bowling_pool.jpg", tag: "Tamanho Família" }
+    ],
+    entradas: [
+      { id: 9, title: "Mini Pastéis (12 un)", price: "R$ 33,00", desc: "Cesta de mini pastéis super crocantes e recheados na hora. Opções de carne, queijo e chocolate.", image: null, tag: "Para Compartilhar" },
+      { id: 10, title: "Batata Frita Tradicional", price: "R$ 30,00", desc: "Porção de batatas fritas super crocantes por fora e macias por dentro, salpicadas com tempero especial.", image: null, tag: "Clássico" },
+      { id: 11, title: "Batata Frita Rústica", price: "R$ 34,50", desc: "Batatas fritas rústicas com casca, temperadas com alecrim fresco e alho confitado, acompanhadas de maionese defumada.", image: null, tag: "Especial" },
+      { id: 12, title: "Anel de Cebola (Onion Rings)", price: "R$ 34,50", desc: "Anéis de cebola gigantes empanados em farinha panko super crocante, acompanhados de barbecue.", image: null, tag: "Sucesso" },
+      { id: 13, title: "Porção Mista", price: "R$ 122,50", desc: "A porção definitiva de boteco: alcatra em tiras grelhada, calabresa acebolada, coração de frango e cubos de frango crocante.", image: null, tag: "Completa" },
+      { id: 14, title: "Porção de Alcatra", price: "R$ 49,00", desc: "Alcatra premium em tiras grelhada na chapa com cebola e pimentão, servida bem quente com farofa.", image: null, tag: "Carne Grelhada" }
+    ],
+    bebidas: [
+      { id: 15, title: "Gin de Morango", price: "Consulte", desc: "Drink refrescante de gin artesanal premium, xarope de morangos selecionados, água tônica e especiarias.", image: "/photos/instagram/venue_carousel.jpg", tag: "Exclusivo" },
+      { id: 16, title: "Cerveja Long Neck (330ml)", price: "R$ 13,00", desc: "Marcas premium importadas e nacionais geladas ao extremo para acompanhar seu jogo.", image: null, tag: "Gelada" },
+      { id: 17, title: "Cerveja Lata (350ml)", price: "R$ 8,00", desc: "Opções tradicionais de cervejas nacionais, sempre trincando de geladas.", image: null, tag: "Econômico" },
+      { id: 18, title: "Refrigerante Lata", price: "R$ 8,00", desc: "Coca-Cola, Guaraná Antarctica, Fanta e suas versões zero açúcar bem gelados.", image: null, tag: "Refrescante" },
+      { id: 19, title: "Suco Natural (300ml)", price: "R$ 13,00", desc: "Sucos naturais feitos na hora. Laranja, limão, morango ou abacaxi com hortelã.", image: null, tag: "Saudável" }
+    ]
   }
 
-  const { restaurant, features, gallery, reviews, menu_featured, logo } = data;
+  // Reviews
+  const reviews = [
+    { author: "Mariana Silva", initial: "M", rating: 5, text: "Lugar incrível! Boliche divertido e a pizza é sensacional!", date: "Google Maps Review" },
+    { author: "Carlos Eduardo", initial: "C", rating: 5, text: "Perfeito para ir com a família. As crianças amaram o espaço kids.", date: "Google Maps Review" },
+    { author: "Rodrigo Santos", initial: "R", rating: 5, text: "Os burgers The Ones são de outro nível. Recomendo o The Cheese One!", date: "Google Maps Review" },
+    { author: "Amanda Costa", initial: "A", rating: 4, text: "Ambiente top, drinks bons e atendimento rápido.", date: "Google Maps Review" },
+    { author: "Felipe Almeida", initial: "F", rating: 5, text: "O melhor lugar para Happy Hour em Tijucas!", date: "Google Maps Review" }
+  ]
 
-  const scrollToMenu = () => menuRef.current?.scrollIntoView({ behavior: 'smooth' });
+  // Handle scrolling of reviews
+  useEffect(() => {
+    const scroller = scrollerRef.current
+    if (!scroller) return
 
-  /* ── MENU TAB LOGIC ── */
-  const menuTabs = ['The Ones (Burgers)', 'Pizzas', 'Entradas e Porções'];
-  const filteredMenu = menu_featured.filter((item) => {
-    if (menuTab === 'The Ones (Burgers)') return item.name.startsWith('The ');
-    if (menuTab === 'Pizzas') return item.name.toLowerCase().includes('pizza');
-    if (menuTab === 'Entradas e Porções') return !item.name.startsWith('The ') && !item.name.toLowerCase().includes('pizza');
-    return true;
-  });
+    const handleScroll = () => {
+      const scrollerRect = scroller.getBoundingClientRect()
+      const cards = scroller.querySelectorAll('.review-card')
+      let minDistance = Infinity
+      let activeIdx = 0
 
-  /* ── REVIEWS ── */
-  const nextReview = () => setReviewIdx((i) => (i + 1) % reviews.length);
-  const prevReview = () => setReviewIdx((i) => (i - 1 + reviews.length) % reviews.length);
-  const rev = reviews[reviewIdx];
+      cards.forEach((card, index) => {
+        const cardRect = card.getBoundingClientRect()
+        const cardCenter = cardRect.left + cardRect.width / 2
+        const scrollerCenter = scrollerRect.left + scrollerRect.width / 2
+        const distance = Math.abs(cardCenter - scrollerCenter)
+
+        if (distance < minDistance) {
+          minDistance = distance
+          activeIdx = index
+        }
+
+        // JS Fallback for scroll-driven animations scaling
+        if (!CSS.supports('(animation-timeline: view()) and (animation-range: entry)')) {
+          const progress = (cardCenter - scrollerRect.left) / scrollerRect.width
+          const scale = 1 - Math.abs(progress - 0.5) * 0.3
+          const opacity = 1 - Math.abs(progress - 0.5) * 1.0
+          const clampedScale = Math.max(0.85, Math.min(1, scale))
+          const clampedOpacity = Math.max(0.4, Math.min(1, opacity))
+          
+          card.style.transform = `scale(${clampedScale})`
+          card.style.opacity = clampedOpacity
+        }
+      })
+
+      setActiveReviewIndex(activeIdx)
+    }
+
+    scroller.addEventListener('scroll', handleScroll)
+    // Run initially
+    handleScroll()
+
+    return () => {
+      scroller.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+  const scrollCarousel = (direction) => {
+    const scroller = scrollerRef.current
+    if (!scroller) return
+    const cardWidth = scroller.querySelector('.review-card').offsetWidth
+    const gap = 40 // Gap of 2.5rem
+    const scrollAmount = direction === 'left' ? -(cardWidth + gap) : (cardWidth + gap)
+    scroller.scrollBy({ left: scrollAmount, behavior: 'smooth' })
+  }
+
+  // Smooth WhatsApp redirect
+  const contactWhatsApp = (message) => {
+    const encoded = encodeURIComponent(message)
+    window.open(`https://wa.me/5548998184413?text=${encoded}`, '_blank')
+  }
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white font-sans overflow-x-hidden">
+    <>
+      {/* Sticky Navbar */}
+      <nav className="navbar">
+        <div className="navbar-container">
+          <a href="#" className="nav-logo">
+            <img src="/photos/menu/logo.png" alt="Other Bowling Bar Logo" />
+            <div className="nav-logo-text">
+              OTHER <span>BOLICHE</span>
+            </div>
+          </a>
 
-      {/* ═══════════ NAVBAR ═══════════ */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/80 backdrop-blur-md border-b border-white/5">
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
-          <a href="#" className="flex items-center gap-2">
-            <img src={logo} alt="Other Bowling Bar" className="h-10 w-auto rounded" />
-          </a>
-          <div className="hidden md:flex items-center gap-6 text-sm text-gray-300">
-            <a href="#features" className="hover:text-purple-400 transition">Atrações</a>
-            <a href="#gallery" className="hover:text-purple-400 transition">Galeria</a>
-            <a ref={menuRef} href="#menu" className="hover:text-purple-400 transition">Cardápio</a>
-            <a href="#reviews" className="hover:text-purple-400 transition">Avaliações</a>
-            <a href="#location" className="hover:text-purple-400 transition">Localização</a>
+          <ul className={`nav-menu ${mobileMenuOpen ? 'mobile-open' : ''}`}>
+            <li><a href="#boliche" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Boliche</a></li>
+            <li><a href="#destaques" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Diferenciais</a></li>
+            <li><a href="#cardapio" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Cardápio</a></li>
+            <li><a href="#avaliacoes" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Avaliações</a></li>
+            <li><a href="#contato" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Contato</a></li>
+          </ul>
+
+          <div className="nav-actions">
+            <a 
+              href="https://instagram.com/othertijucas" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="instagram-btn"
+              title="Siga-nos no Instagram (@othertijucas)"
+            >
+              <Instagram size={22} />
+            </a>
+            <button 
+              className="cta-button"
+              onClick={() => contactWhatsApp("Olá! Gostaria de reservar uma pista de boliche no Other Bowling Bar.")}
+            >
+              Reservar Pista
+            </button>
           </div>
-          <a
-            href={`https://wa.me/${restaurant.whatsapp}`}
-            target="_blank"
-            rel="noreferrer"
-            className="bg-green-600 hover:bg-green-500 text-white text-sm font-semibold px-4 py-2 rounded-full transition"
+
+          <button 
+            className="mobile-toggle" 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Menu de navegação"
           >
-            Reservar
-          </a>
+            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
       </nav>
 
-      {/* ═══════════ HERO ═══════════ */}
-      <section className="relative h-screen flex items-center justify-center">
-        <img
-          src={gallery[0].file}
-          alt={gallery[0].alt}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-[#0a0a0a]" />
-        <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-            {restaurant.name}
-          </h1>
-          <p className="mt-4 text-lg md:text-xl text-gray-200">{restaurant.tagline}</p>
-          <p className="mt-2 text-gray-400 text-sm max-w-xl mx-auto">{restaurant.description}</p>
+      {/* Hero Section */}
+      <header className="hero-section">
+        <div 
+          className="hero-bg-media" 
+          style={{ backgroundImage: `url('/photos/instagram/burger_highlight.jpg')` }}
+        ></div>
+        <div className="hero-overlay"></div>
+        
+        <div className="hero-container">
+          <div className="hero-content">
+            <div className="hero-badge">
+              <Zap size={14} style={{ marginRight: '0.25rem' }} />
+              100% Interativo
+            </div>
+            
+            <h1 className="hero-title">
+              Pistas de Boliche 
+              <span className="glow-pink-text">Interativo</span>
+            </h1>
+            
+            <p className="hero-description">
+              A primeira pista de boliche 100% interativa de Santa Catarina! Um espaço onde o boliche encontra o sabor irresistível de pizzas e burgers artesanais, chopp gelado, fliperamas e muito mais em Tijucas.
+            </p>
 
-          {/* Rating */}
-          <div className="mt-6 flex items-center justify-center gap-1">
-            {[...Array(5)].map((_, i) => (
-              <Star
-                key={i}
-                size={20}
-                className={i < Math.round(restaurant.google_rating) ? 'text-yellow-400 fill-yellow-400' : 'text-gray-600'}
-              />
-            ))}
-            <span className="ml-2 text-sm text-gray-300">
-              {restaurant.google_rating} · {restaurant.google_votes} avaliações no Google
-            </span>
-          </div>
+            <div className="hero-rating">
+              <Star size={18} fill="currentColor" />
+              <strong>4.7/5</strong> no Google 
+              <span>(450+ avaliações)</span>
+            </div>
 
-          {/* CTAs */}
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href={`https://wa.me/${restaurant.whatsapp}`}
-              target="_blank"
-              rel="noreferrer"
-              className="bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-4 rounded-full text-lg shadow-lg shadow-green-600/30 transition"
-            >
-              Reservar pelo WhatsApp
-            </a>
-            <button
-              onClick={scrollToMenu}
-              className="border-2 border-purple-500 text-purple-300 hover:bg-purple-500/20 font-bold px-8 py-4 rounded-full text-lg transition"
-            >
-              Ver Cardápio
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════ FEATURES ═══════════ */}
-      <section id="features" className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              O que te espera no Other
-            </span>
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            {features.map((f, i) => (
-              <div
-                key={i}
-                className="bg-[#141414] border border-white/5 rounded-2xl p-5 hover:border-purple-500/40 hover:shadow-lg hover:shadow-purple-500/10 transition group"
+            <div className="hero-ctas">
+              <button 
+                className="cta-button"
+                onClick={() => contactWhatsApp("Olá! Gostaria de reservar uma pista de boliche hoje.")}
               >
-                <div className="text-4xl mb-3">{f.icon}</div>
-                <h3 className="font-semibold text-white group-hover:text-purple-300 transition">{f.title}</h3>
-                <p className="mt-1 text-sm text-gray-400 leading-relaxed">{f.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════ GALLERY ═══════════ */}
-      <section id="gallery" className="py-20 px-4 bg-[#0d0d0d]">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Galeria
-            </span>
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {gallery.map((g, i) => (
-              <div key={i} className="relative group overflow-hidden rounded-2xl aspect-[4/3]">
-                <img
-                  src={g.file}
-                  alt={g.alt}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <p className="absolute bottom-0 left-0 right-0 p-4 text-sm text-gray-200 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  {g.caption}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════ MENU ═══════════ */}
-      <section id="menu" className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Cardápio em Destaque
-            </span>
-          </h2>
-          <p className="text-center text-gray-400 mb-8">Os favoritos da casa, feitos com ingredientes selecionados.</p>
-
-          {/* Tabs */}
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-10">
-            {menuTabs.map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setMenuTab(tab)}
-                className={`px-5 py-2 rounded-full text-sm font-semibold transition ${
-                  menuTab === tab
-                    ? 'bg-purple-600 text-white shadow-lg shadow-purple-600/30'
-                    : 'bg-[#1a1a1a] text-gray-400 hover:text-white border border-white/5'
-                }`}
-              >
-                {tab}
+                Reservar Pista por WhatsApp
               </button>
-            ))}
-          </div>
-
-          {/* Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredMenu.map((item, i) => (
-              <div
-                key={i}
-                className="bg-[#141414] border border-white/5 rounded-2xl overflow-hidden hover:border-purple-500/40 hover:shadow-lg hover:shadow-purple-500/10 transition group"
-              >
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={item.photo}
-                    alt={item.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <span className="absolute top-3 left-3 bg-purple-600 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full">
-                    {item.tag}
-                  </span>
-                </div>
-                <div className="p-4">
-                  <div className="flex items-center justify-between mb-1">
-                    <h3 className="font-bold text-white">{item.name}</h3>
-                    <span className="text-cyan-400 font-bold text-sm whitespace-nowrap">{item.price}</span>
-                  </div>
-                  <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════ REVIEWS ═══════════ */}
-      <section id="reviews" className="py-20 px-4 bg-[#0d0d0d]">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12">
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              O que dizem sobre nós
-            </span>
-          </h2>
-
-          <div className="relative bg-[#141414] border border-white/5 rounded-2xl p-8 min-h-[220px] flex flex-col items-center justify-center">
-            <button
-              onClick={prevReview}
-              className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white transition"
-            >
-              <ChevronLeft size={28} />
-            </button>
-            <button
-              onClick={nextReview}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white transition"
-            >
-              <ChevronRight size={28} />
-            </button>
-
-            <div className="w-14 h-14 rounded-full bg-gradient-to-br from-purple-500 to-cyan-500 flex items-center justify-center text-xl font-bold text-white mb-4">
-              {rev.initial}
-            </div>
-            <div className="flex items-center gap-1 mb-3">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  size={16}
-                  className={i < rev.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-600'}
-                />
-              ))}
-            </div>
-            <p className="text-gray-300 italic mb-4 max-w-lg">"{rev.text}"</p>
-            <p className="text-sm font-semibold text-purple-300">{rev.name}</p>
-
-            {/* Dots */}
-            <div className="flex gap-2 mt-6">
-              {reviews.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setReviewIdx(i)}
-                  className={`w-2 h-2 rounded-full transition ${
-                    i === reviewIdx ? 'bg-purple-500 w-6' : 'bg-gray-600'
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════ LOCATION ═══════════ */}
-      <section id="location" className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Como Chegar
-            </span>
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8 items-start">
-            {/* Info */}
-            <div className="space-y-6">
-              <div className="flex items-start gap-3">
-                <MapPin className="text-purple-400 mt-1 flex-shrink-0" size={20} />
-                <div>
-                  <p className="font-semibold text-white">{restaurant.address}</p>
-                  <p className="text-sm text-gray-400">CEP {restaurant.cep}</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <Clock className="text-cyan-400 mt-1 flex-shrink-0" size={20} />
-                <div className="text-sm">
-                  <table className="text-left">
-                    <tbody>
-                      <tr>
-                        <td className="pr-4 py-1 text-gray-400">Terça a Sábado</td>
-                        <td className="py-1 text-white font-medium">{restaurant.hours.tue_sat}</td>
-                      </tr>
-                      <tr>
-                        <td className="pr-4 py-1 text-gray-400">Domingo</td>
-                        <td className="py-1 text-white font-medium">{restaurant.hours.sunday}</td>
-                      </tr>
-                      <tr>
-                        <td className="pr-4 py-1 text-gray-400">Segunda</td>
-                        <td className="py-1 text-red-400 font-medium">{restaurant.hours.monday}</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <Phone className="text-green-400 mt-1 flex-shrink-0" size={20} />
-                <div>
-                  <p className="text-white font-medium">{restaurant.whatsapp_display}</p>
-                  <p className="text-sm text-gray-400">WhatsApp</p>
-                </div>
-              </div>
-              <a
-                href={`https://wa.me/${restaurant.whatsapp}`}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-6 py-3 rounded-full transition shadow-lg shadow-green-600/30"
-              >
-                <Phone size={18} /> Fale conosco no WhatsApp
+              <a href="#cardapio" className="hero-cta-secondary">
+                Ver Cardápio
               </a>
             </div>
+          </div>
 
-            {/* Map */}
-            <div className="rounded-2xl overflow-hidden border border-white/5 h-[350px]">
-              <iframe
-                title="Localização Other Bowling Bar"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.5!2d-48.6!3d-27.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDEyJzAwLjAiUyA0OMKwMzYnMDAuMCJX!5e0!3m2!1spt-BR!2sbr!4v1"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+          <div className="hero-visual">
+            <div className="hero-glow-circle"></div>
+            <div className="hero-image-wrapper">
+              <img src="/photos/menu/The_Classic.jpg" alt="Delicioso burger The Ones" />
             </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Highlights Section */}
+      <section id="destaques" className="features-section">
+        <div className="section-header">
+          <span className="section-tag">Diferenciais</span>
+          <h2 className="section-title glow-cyan-text">O Que Espera Por Você</h2>
+          <p className="section-desc">No Other Bowling Bar, cada detalhe é planejado para criar experiências e momentos lendários com seus amigos e familiares.</p>
+        </div>
+
+        <div className="features-grid">
+          {highlights.map((feat, index) => (
+            <div 
+              key={index} 
+              className={`feature-card ${feat.highlighted ? 'highlighted' : ''}`}
+            >
+              <div className="feature-icon-wrapper">
+                {feat.icon}
+              </div>
+              <h3>{feat.title}</h3>
+              <p>{feat.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Special Combo Section */}
+      <section id="boliche" className="promo-section">
+        <div className="promo-container">
+          <div>
+            <span className="promo-tag">Destaque Exclusivo</span>
+            <h2 className="promo-title glow-pink-text">Pista Interativa & Sabores Sensacionais</h2>
+            <p className="promo-desc">
+              Que tal o melhor dos dois mundos? Nossas pistas contam com sensores que reagem à trajetória da bola, criando animações dinâmicas sobre a madeira. E para acompanhar a jogada, peça nossos combos especiais de boliche e cardápio na hora.
+            </p>
+            <div className="promo-price-box">
+              <div>
+                <p className="promo-price-label">Ideal para casais ou amigos</p>
+                <p className="promo-price">Pizza + Boliche</p>
+              </div>
+            </div>
+            <button 
+              className="cta-button"
+              onClick={() => contactWhatsApp("Olá! Gostaria de saber mais sobre os valores das pistas e combos de pizza + boliche.")}
+            >
+              Consultar Valores & Reservar <ArrowRight size={16} />
+            </button>
+          </div>
+          <div className="promo-image-wrapper">
+            <img src="/photos/instagram/bowling_pool.jpg" alt="Combo Especial de Pizza e Boliche" />
           </div>
         </div>
       </section>
 
-      {/* ═══════════ FOOTER ═══════════ */}
-      <footer className="border-t border-white/5 py-10 px-4">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-3">
-            <img src={logo} alt="Other Bowling Bar" className="h-10 w-auto rounded" />
-            <span className="text-gray-400 text-sm">© {new Date().getFullYear()} Other Bowling Bar</span>
+      {/* Menu Section */}
+      <section id="cardapio" className="menu-section">
+        <div className="menu-container">
+          <div className="section-header">
+            <span className="section-tag">Cardápio</span>
+            <h2 className="section-title glow-purple-text">Sabor de Outro Nível</h2>
+            <p className="section-desc">Burgers artesanais exclusivos com blends suculentos de 180g, pizzas artesanais crocantes e bebidas refrescantes.</p>
           </div>
-          <div className="flex items-center gap-6 text-sm text-gray-400">
-            <a href="#features" className="hover:text-purple-400 transition">Atrações</a>
-            <a href="#menu" className="hover:text-purple-400 transition">Cardápio</a>
-            <a href="#reviews" className="hover:text-purple-400 transition">Avaliações</a>
-            <a href="#location" className="hover:text-purple-400 transition">Localização</a>
+
+          <div className="menu-tabs">
+            <button 
+              className={`menu-tab-btn ${activeTab === 'burgers' ? 'active' : ''}`}
+              onClick={() => setActiveTab('burgers')}
+            >
+              The Ones (Burgers)
+            </button>
+            <button 
+              className={`menu-tab-btn ${activeTab === 'pizzas' ? 'active' : ''}`}
+              onClick={() => setActiveTab('pizzas')}
+            >
+              Pizzas
+            </button>
+            <button 
+              className={`menu-tab-btn ${activeTab === 'entradas' ? 'active' : ''}`}
+              onClick={() => setActiveTab('entradas')}
+            >
+              Entradas & Porções
+            </button>
+            <button 
+              className={`menu-tab-btn ${activeTab === 'bebidas' ? 'active' : ''}`}
+              onClick={() => setActiveTab('bebidas')}
+            >
+              Bebidas & Drinks
+            </button>
           </div>
-          <a
-            href={restaurant.instagram_url}
-            target="_blank"
-            rel="noreferrer"
-            className="text-purple-400 hover:text-purple-300 transition font-semibold text-sm"
-          >
-            {restaurant.instagram}
-          </a>
+
+          <div className="menu-grid">
+            {menuData[activeTab].map((item) => (
+              <div key={item.id} className="menu-card">
+                {item.image && (
+                  <div className="menu-card-image">
+                    <img src={item.image} alt={item.title} />
+                  </div>
+                )}
+                <div className="menu-card-content">
+                  <div className="menu-card-header">
+                    <h3 className="menu-card-title">{item.title}</h3>
+                    <span className="menu-card-price">{item.price}</span>
+                  </div>
+                  <p className="menu-card-desc">{item.desc}</p>
+                  <div className="menu-card-footer">
+                    <span className="menu-card-badge">{item.tag}</span>
+                    <button 
+                      className="menu-order-btn"
+                      onClick={() => contactWhatsApp(`Olá! Gostaria de pedir o item "${item.title}" para consumo.`)}
+                    >
+                      Pedir no Boliche
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews Section */}
+      <section id="avaliacoes" className="reviews-section">
+        <div className="reviews-container">
+          <div className="section-header">
+            <span className="section-tag">Avaliações</span>
+            <h2 className="section-title glow-pink-text">O Que Dizem Nossos Clientes</h2>
+            <p className="section-desc">Avaliação média de 4.7 estrelas com mais de 450 avaliações no Google Maps.</p>
+          </div>
+
+          <div className="scroller-wrapper">
+            <ul className="scroller" ref={scrollerRef}>
+              {reviews.map((rev, index) => (
+                <li key={index} className="review-card">
+                  <div className="review-stars">
+                    {[...Array(rev.rating)].map((_, i) => (
+                      <Star key={i} size={16} fill="currentColor" />
+                    ))}
+                  </div>
+                  <p className="review-text">"{rev.text}"</p>
+                  <div className="review-author">
+                    <div className="author-avatar">{rev.initial}</div>
+                    <div className="author-info">
+                      <h4>{rev.author}</h4>
+                      <p>{rev.date}</p>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="scroller-navigation">
+            <button className="scroll-btn" onClick={() => scrollCarousel('left')} aria-label="Avaliação anterior">
+              <ChevronLeft size={20} />
+            </button>
+            
+            {reviews.map((_, index) => (
+              <span 
+                key={index} 
+                className={`scroll-dot ${index === activeReviewIndex ? 'active' : ''}`}
+              ></span>
+            ))}
+
+            <button className="scroll-btn" onClick={() => scrollCarousel('right')} aria-label="Próxima avaliação">
+              <ChevronRight size={20} />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact & Location Section */}
+      <section id="contato" className="contact-section">
+        <div className="contact-container">
+          <div className="contact-info">
+            <div className="section-header" style={{ textAlign: 'left', alignItems: 'flex-start', padding: 0, marginBottom: '2rem' }}>
+              <span className="section-tag">Contato & Localização</span>
+              <h2 className="section-title glow-cyan-text">Venha Jogar Conosco</h2>
+              <p className="section-desc">Planeje sua visita ou faça seu evento corporativo ou aniversário aqui no Other!</p>
+            </div>
+
+            <div className="info-item">
+              <div className="info-icon">
+                <MapPin size={24} />
+              </div>
+              <div className="info-details">
+                <h3>Endereço</h3>
+                <p>Rua Coronel Gallotti, 431 — Centro<br />Tijucas, SC — CEP 88200-000</p>
+              </div>
+            </div>
+
+            <div className="info-item">
+              <div className="info-icon">
+                <Clock size={24} />
+              </div>
+              <div className="info-details" style={{ width: '100%' }}>
+                <h3>Horário de Funcionamento</h3>
+                <table className="hours-table">
+                  <tbody>
+                    <tr>
+                      <td>Terça a Sábado</td>
+                      <td>18:00 — 00:00</td>
+                    </tr>
+                    <tr>
+                      <td>Domingo</td>
+                      <td>17:00 — 23:00</td>
+                    </tr>
+                    <tr>
+                      <td>Segunda-feira</td>
+                      <td>Fechado</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div className="info-item">
+              <div className="info-icon">
+                <Phone size={24} />
+              </div>
+              <div className="info-details">
+                <h3>Reservas & Eventos</h3>
+                <p>WhatsApp: <strong>(48) 99818-4413</strong></p>
+                <p style={{ fontSize: '0.9rem', marginTop: '0.2rem' }}>Dica: Faça sua reserva antecipada para evitar filas no boliche.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="map-wrapper">
+            <iframe 
+              title="Other Bowling Bar no Google Maps"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3548.8687799507856!2d-48.63665792461971!3d-27.2407519764516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95034ba7064d1f27%3A0xeab5b706c8f61536!2sR.%20Coronel%20Gallotti%2C%20431%20-%20Centro%2C%20Tijucas%20-%20SC%2C%2088200-000!5e0!3m2!1spt-BR!2sbr!4v1781834927000!5m2!1spt-BR!2sbr"
+              allowFullScreen="" 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      {/* Floating WhatsApp Action Button */}
+      <button 
+        className="floating-whatsapp" 
+        onClick={() => contactWhatsApp("Olá! Gostaria de fazer uma reserva de pista ou tirar dúvidas.")}
+        aria-label="Falar pelo WhatsApp"
+      >
+        <Phone size={30} fill="currentColor" />
+      </button>
+
+      {/* Footer */}
+      <footer className="footer">
+        <div className="footer-container">
+          <div className="footer-top">
+            <div className="footer-brand">
+              <a href="#" className="footer-logo">
+                <img src="/photos/menu/logo.png" alt="Other Bowling Bar Logo" />
+                <div>OTHER <span>BOLICHE</span></div>
+              </a>
+              <p>A primeira pista de boliche 100% interativa de Santa Catarina. Gastronomia premium, diversão de alta qualidade e momentos incríveis.</p>
+              <div className="footer-socials">
+                <a 
+                  href="https://instagram.com/othertijucas" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="footer-social-btn"
+                  aria-label="Siga no Instagram"
+                >
+                  <Instagram size={18} />
+                </a>
+              </div>
+            </div>
+
+            <div className="footer-links">
+              <div className="footer-link-group">
+                <h4>Navegação</h4>
+                <ul>
+                  <li><a href="#boliche">Boliche</a></li>
+                  <li><a href="#destaques">Diferenciais</a></li>
+                  <li><a href="#cardapio">Cardápio</a></li>
+                  <li><a href="#avaliacoes">Avaliações</a></li>
+                </ul>
+              </div>
+
+              <div className="footer-link-group">
+                <h4>Legal</h4>
+                <ul>
+                  <li><a href="#">Privacidade</a></li>
+                  <li><a href="#">Termos de Uso</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="footer-bottom">
+            <p>&copy; {new Date().getFullYear()} Other Bowling Bar. Todos os direitos reservados. Tijucas, SC.</p>
+            <p>Desenvolvido com carinho para momentos memoráveis.</p>
+          </div>
         </div>
       </footer>
-
-      {/* ═══════════ WHATSAPP FAB ═══════════ */}
-      <a
-        href={`https://wa.me/${restaurant.whatsapp}`}
-        target="_blank"
-        rel="noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-400 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg shadow-green-500/40 transition text-2xl"
-        aria-label="WhatsApp"
-      >
-        <Phone size={26} />
-      </a>
-    </div>
-  );
+    </>
+  )
 }
+
+export default App
