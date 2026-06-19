@@ -255,7 +255,7 @@ function App() {
           <div className="hero-visual">
             <div className="hero-glow-circle"></div>
             <div className="hero-image-wrapper">
-              <img src="/photos/google_maps/bowling-lanes-full-view-cosmic-display.jpg" alt="No Other, cada momento é especial" />
+              <img src="/photos/hero/hero-pins.jpg" alt="No Other, cada momento é especial" />
             </div>
           </div>
         </div>
