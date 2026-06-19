@@ -45,13 +45,13 @@ function App() {
       { id: 1, title: "The Classic", price: "R$ 39,90", desc: "Blend suculento de 180g, queijo cheddar derretido e nossa exclusiva maionese defumada no pão brioche macio.", image: "/photos/menu/The_Classic.jpg", tag: "Campeão de Vendas" },
       { id: 2, title: "The Cheese One", price: "R$ 48,90", desc: "Blend suculento de 180g, dobro de queijo cheddar derretido, molho especial artesanal no pão brioche tostado.", image: "/photos/menu/The_Cheese_One.jpg", tag: "Muito Queijo" },
       { id: 3, title: "The Bacon One", price: "R$ 44,90", desc: "Blend suculento de 180g, fatias crocantes de bacon premium, cheddar derretido e maionese defumada.", image: "/photos/menu/The_Bacon_One.jpg", tag: "Crocante" },
-      { id: 4, title: "The Double One", price: "R$ 53,90", desc: "Dois blends suculentos de 180g (total 360g de carne), queijo cheddar duplo e maionese artesanal da casa.", image: "/photos/menu/The_Bacon_One.jpg", tag: "Super Fome" },
-      { id: 5, title: "The Chicken Crispy", price: "R$ 42,90", desc: "Filé de frango super empanado e crocante, cheddar cremoso, alface fresco e molho leve da casa.", image: "/photos/menu/The_Classic.jpg", tag: "Novidade" }
+      { id: 4, title: "The Double One", price: "R$ 53,90", desc: "Dois blends suculentos de 180g (total 360g de carne), queijo cheddar duplo e maionese artesanal da casa.", image: "/photos/menu/The_Double_One.jpg", tag: "Super Fome" },
+      { id: 5, title: "The Chicken Crispy", price: "R$ 42,90", desc: "Filé de frango super empanado e crocante, cheddar cremoso, alface fresco e molho leve da casa.", image: "/photos/menu/The_Chicken_Crispy.jpg", tag: "Novidade" }
     ],
     pizzas: [
-      { id: 6, title: "Pizza Pequena (25cm)", price: "R$ 38,00", desc: "Tamanho perfeito para matar a sua fome individual. 4 fatias generosas com os sabores tradicionais ou doces.", image: "/photos/instagram/bowling_pool.jpg", tag: "Individual" },
-      { id: 7, title: "Pizza Média (30cm)", price: "R$ 55,00", desc: "Ideal para compartilhar em duas pessoas. 8 fatias com até 2 sabores de sua preferência.", image: "/photos/instagram/bowling_pool.jpg", tag: "Mais Pedida" },
-      { id: 8, title: "Pizza Grande (35cm)", price: "R$ 80,00", desc: "Perfeita para a família ou o grupo de boliche. 12 fatias gigantes com até 3 sabores diferentes.", image: "/photos/instagram/bowling_pool.jpg", tag: "Tamanho Família" }
+      { id: 6, title: "Pizza Pequena (25cm)", price: "R$ 38,00", desc: "Tamanho perfeito para matar a sua fome individual. 4 fatias generosas com os sabores tradicionais ou doces.", image: "/photos/menu/Pizza_Media_30cm.jpg", tag: "Individual" },
+      { id: 7, title: "Pizza Média (30cm)", price: "R$ 55,00", desc: "Ideal para compartilhar em duas pessoas. 8 fatias com até 2 sabores de sua preferência.", image: "/photos/menu/Pizza_Media_30cm.jpg", tag: "Mais Pedida" },
+      { id: 8, title: "Pizza Grande (35cm)", price: "R$ 80,00", desc: "Perfeita para a família ou o grupo de boliche. 12 fatias gigantes com até 3 sabores diferentes.", image: "/photos/menu/Pizza_Media_30cm.jpg", tag: "Tamanho Família" }
     ],
     entradas: [
       { id: 9, title: "Mini Pastéis (12 un)", price: "R$ 33,00", desc: "Cesta de mini pastéis super crocantes e recheados na hora. Opções de carne, queijo e chocolate.", image: null, tag: "Para Compartilhar" },
@@ -62,7 +62,7 @@ function App() {
       { id: 14, title: "Porção de Alcatra", price: "R$ 49,00", desc: "Alcatra premium em tiras grelhada na chapa com cebola e pimentão, servida bem quente com farofa.", image: null, tag: "Carne Grelhada" }
     ],
     bebidas: [
-      { id: 15, title: "Gin de Morango", price: "Consulte", desc: "Drink refrescante de gin artesanal premium, xarope de morangos selecionados, água tônica e especiarias.", image: "/photos/instagram/venue_carousel.jpg", tag: "Exclusivo" },
+      { id: 15, title: "Gin de Morango", price: "Consulte", desc: "Drink refrescante de gin artesanal premium, xarope de morangos selecionados, água tônica e especiarias.", image: "/photos/drinks/gin-morango.jpg", tag: "Exclusivo" },
       { id: 16, title: "Cerveja Long Neck (330ml)", price: "R$ 13,00", desc: "Marcas premium importadas e nacionais geladas ao extremo para acompanhar seu jogo.", image: null, tag: "Gelada" },
       { id: 17, title: "Cerveja Lata (350ml)", price: "R$ 8,00", desc: "Opções tradicionais de cervejas nacionais, sempre trincando de geladas.", image: null, tag: "Econômico" },
       { id: 18, title: "Refrigerante Lata", price: "R$ 8,00", desc: "Coca-Cola, Guaraná Antarctica, Fanta e suas versões zero açúcar bem gelados.", image: null, tag: "Refrescante" },
@@ -193,7 +193,7 @@ function App() {
       <header className="hero-section">
         <div 
           className="hero-bg-media" 
-          style={{ backgroundImage: `url('/photos/instagram/burger_highlight.jpg')` }}
+          style={{ backgroundImage: `url('/photos/hero/hero-bg.jpg')` }}
         ></div>
         <div className="hero-overlay"></div>
         
@@ -235,7 +235,7 @@ function App() {
           <div className="hero-visual">
             <div className="hero-glow-circle"></div>
             <div className="hero-image-wrapper">
-              <img src="/photos/menu/The_Classic.jpg" alt="Delicioso burger The Ones" />
+              <img src="/photos/hero/hero-burger.jpg" alt="The Ones burger line" />
             </div>
           </div>
         </div>
@@ -288,7 +288,7 @@ function App() {
             </button>
           </div>
           <div className="promo-image-wrapper">
-            <img src="/photos/instagram/bowling_pool.jpg" alt="Combo Especial de Pizza e Boliche" />
+            <img src="/photos/promo/bowling-interactive.jpg" alt="Combo Especial de Pizza e Boliche" />
           </div>
         </div>
       </section>
