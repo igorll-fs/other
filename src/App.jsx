@@ -179,9 +179,9 @@ function App() {
 
           <ul className={`nav-menu ${mobileMenuOpen ? 'mobile-open' : ''}`}>
             <li><a href="#boliche" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Boliche</a></li>
-            <li><a href="#destaques" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Diferenciais</a></li>
-            <li><a href="#cardapio" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Cardápio</a></li>
+            <li><a href="#destaques" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Experiências</a></li>
             <li><a href="#eventos" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Eventos</a></li>
+            <li><a href="#cardapio" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Cardápio</a></li>
             <li><a href="#avaliacoes" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Avaliações</a></li>
             <li><a href="#contato" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Contato</a></li>
           </ul>
@@ -218,7 +218,7 @@ function App() {
       <header className="hero-section">
         <div 
           className="hero-bg-media" 
-          style={{ backgroundImage: `url('/photos/hero/hero-bg.jpg')` }}
+          style={{ backgroundImage: `url('/photos/hero/hero-exterior.jpg')` }}
         ></div>
         <div className="hero-overlay"></div>
         
@@ -226,33 +226,28 @@ function App() {
           <div className="hero-content">
             <div className="hero-badge">
               <Zap size={14} style={{ marginRight: '0.25rem' }} />
-              100% Interativo
+              Tijucas, SC
             </div>
             
             <h1 className="hero-title">
-              Pistas de Boliche 
-              <span className="glow-pink-text">Interativo</span>
+              Sua Noite Perfeita
+              <span className="glow-pink-text">Começa Aqui</span>
             </h1>
             
             <p className="hero-description">
-              A primeira pista de boliche 100% interativa de Santa Catarina! Um espaço onde o boliche encontra o sabor irresistível de pizzas e burgers artesanais, chopp gelado, fliperamas e muito mais em Tijucas.
+              Boliche interativo, gastronomia premium, drinks autorais e música ao vivo. 
+              O lugar mais divertido de Tijucas te espera!
             </p>
-
-            <div className="hero-rating">
-              <Star size={18} fill="currentColor" />
-              <strong>4.7/5</strong> no Google 
-              <span>(450+ avaliações)</span>
-            </div>
 
             <div className="hero-ctas">
               <button 
                 className="cta-button"
-                onClick={() => contactWhatsApp("Olá! Gostaria de reservar uma pista de boliche hoje.")}
+                onClick={() => contactWhatsApp("Olá! Gostaria de reservar uma pista de boliche no Other Bowling Bar.")}
               >
-                Reservar Pista por WhatsApp
+                Reservar Agora
               </button>
-              <a href="#cardapio" className="hero-cta-secondary">
-                Ver Cardápio
+              <a href="#destaques" className="hero-cta-secondary">
+                Conhecer Espaço
               </a>
             </div>
           </div>
@@ -260,11 +255,31 @@ function App() {
           <div className="hero-visual">
             <div className="hero-glow-circle"></div>
             <div className="hero-image-wrapper">
-              <img src="/photos/hero/hero-burger.jpg" alt="The Ones burger line" />
+              <img src="/photos/instagram_real/05-bowling-date-night.jpg" alt="No Other, cada momento é especial" />
             </div>
           </div>
         </div>
       </header>
+
+      {/* Stats Bar */}
+      <div className="stats-bar">
+        <div className="stat">
+          <span className="stat-number">6</span>
+          <span className="stat-label">Pistas Interativas</span>
+        </div>
+        <div className="stat">
+          <span className="stat-number">4.7★</span>
+          <span className="stat-label">Google (472+ votos)</span>
+        </div>
+        <div className="stat">
+          <span className="stat-number">17K+</span>
+          <span className="stat-label">Seguidores Instagram</span>
+        </div>
+        <div className="stat">
+          <span className="stat-number">2017</span>
+          <span className="stat-label">Desde</span>
+        </div>
+      </div>
 
       {/* Highlights Section */}
       <section id="destaques" className="features-section">
@@ -321,6 +336,37 @@ function App() {
         </div>
       </section>
 
+      {/* Events Section */}
+      <section id="eventos" className="events-section">
+        <div className="events-container">
+          <div className="section-header">
+            <span className="section-tag">Eventos</span>
+            <h2 className="section-title glow-pink-text">Celebre na Other</h2>
+            <p className="section-desc">Espaço completo para aniversários, eventos corporativos e confraternizações. Surpreenda seus convidados!</p>
+          </div>
+          <div className="events-grid">
+            <div className="event-card">
+              <div className="event-icon">🎂</div>
+              <h3>Aniversários</h3>
+              <p>Faça sua festa com boliche interativo, gastronomia premium e drinks exclusivos. Aniversariantes da semana ganham petit gateau!</p>
+              <button className="cta-button" onClick={() => contactWhatsApp("Olá! Gostaria de fazer uma festa de aniversário no Other.")}>Reservar Festa</button>
+            </div>
+            <div className="event-card">
+              <div className="event-icon">🏢</div>
+              <h3>Corporativo</h3>
+              <p>Team building, confraternizações e eventos corporativos em um ambiente único. Espaço exclusivo para grupos.</p>
+              <button className="cta-button" onClick={() => contactWhatsApp("Olá! Gostaria de fazer um evento corporativo no Other.")}>Solicitar Proposta</button>
+            </div>
+            <div className="event-card">
+              <div className="event-icon">🎯</div>
+              <h3>Grupos</h3>
+              <p>Amigos, família ou qualquer ocasião especial. Reserve pistas, aproveite a gastronomia e divirta-se!</p>
+              <button className="cta-button" onClick={() => contactWhatsApp("Olá! Gostaria de reservar para um grupo no Other.")}>Reservar Mesa</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Menu Section */}
       <section id="cardapio" className="menu-section">
         <div className="menu-container">
@@ -367,37 +413,6 @@ function App() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Events Section */}
-      <section id="eventos" className="events-section">
-        <div className="events-container">
-          <div className="section-header">
-            <span className="section-tag">Eventos</span>
-            <h2 className="section-title glow-pink-text">Celebre na Other</h2>
-            <p className="section-desc">Espaço completo para aniversários, eventos corporativos e confraternizações. Surpreenda seus convidados!</p>
-          </div>
-          <div className="events-grid">
-            <div className="event-card">
-              <div className="event-icon">🎂</div>
-              <h3>Aniversários</h3>
-              <p>Faça sua festa com boliche interativo, gastronomia premium e drinks exclusivos. Aniversariantes da semana ganham petit gateau!</p>
-              <button className="cta-button" onClick={() => contactWhatsApp("Olá! Gostaria de fazer uma festa de aniversário no Other.")}>Reservar Festa</button>
-            </div>
-            <div className="event-card">
-              <div className="event-icon">🏢</div>
-              <h3>Corporativo</h3>
-              <p>Team building, confraternizações e eventos corporativos em um ambiente único. Espaço exclusivo para grupos.</p>
-              <button className="cta-button" onClick={() => contactWhatsApp("Olá! Gostaria de fazer um evento corporativo no Other.")}>Solicitar Proposta</button>
-            </div>
-            <div className="event-card">
-              <div className="event-icon">🎯</div>
-              <h3>Grupos</h3>
-              <p>Amigos, família ou qualquer ocasião especial. Reserve pistas, aproveite a gastronomia e divirta-se!</p>
-              <button className="cta-button" onClick={() => contactWhatsApp("Olá! Gostaria de reservar para um grupo no Other.")}>Reservar Mesa</button>
-            </div>
           </div>
         </div>
       </section>
@@ -590,9 +605,9 @@ function App() {
                 <h4>Navegação</h4>
                 <ul>
                   <li><a href="#boliche">Boliche</a></li>
-                  <li><a href="#destaques">Diferenciais</a></li>
-                  <li><a href="#cardapio">Cardápio</a></li>
+                  <li><a href="#destaques">Experiências</a></li>
                   <li><a href="#eventos">Eventos</a></li>
+                  <li><a href="#cardapio">Cardápio</a></li>
                   <li><a href="#avaliacoes">Avaliações</a></li>
                 </ul>
               </div>
