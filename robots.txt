@@ -1,0 +1,5 @@
+# robots.txt for otherbowlingbar.com
+User-agent: *
+Allow: /
+
+Sitemap: https://otherbowlingbar.com/sitemap.xml

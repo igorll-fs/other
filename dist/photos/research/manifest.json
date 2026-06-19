@@ -1,0 +1,545 @@
+{
+  "generated": "2026-06-19",
+  "venue": "Other Bowling Bar",
+  "location": "R. Cel. Gallotti, 431 - Centro, Tijucas/SC",
+  "instagram": "@othertijucas",
+  "website": "https://otherbowlingbar.com",
+  "sources": [
+    "otherbowlingbar.com (official website)",
+    "conhecatijucas.com.br (official tourism page)",
+    "restaurantguru.com.br (Google-sourced photos)",
+    "galeramix.com.br (news article)",
+    "vipsocial.com.br (news articles with inauguration photos)"
+  ],
+  "photos": {
+    "logo": [
+      {
+        "file": "logo-dark.svg",
+        "width": 870,
+        "height": 251,
+        "format": "SVG",
+        "source": "otherbowlingbar.com",
+        "description": "Official dark logotype - 'Other Bowling Bar' wordmark",
+        "use": "logo",
+        "priority": 1
+      }
+    ],
+    "hero": [
+      {
+        "file": "venue-bowling-lanes-interactive-koi-projection.jpg",
+        "width": 859,
+        "height": 645,
+        "source": "restaurantguru.com.br",
+        "description": "Collage of 4 photos showing interactive bowling lanes with koi fish projection mapping, bar area with 'CHOPES' neon sign, bowling ball racks, and digital scoring monitors. Best showcase of the interactive bowling technology.",
+        "use": "hero",
+        "priority": 1,
+        "tags": ["bowling", "interactive", "neon", "projection", "koi", "atmosphere"]
+      },
+      {
+        "file": "venue-bowling-lanes-neon-led-purple.jpg",
+        "width": 720,
+        "height": 405,
+        "source": "galeramix.com.br",
+        "description": "Modern bowling lanes illuminated with purple/LED neon lighting, colorful bowling balls visible, industrial ceiling with dark walls. High-energy atmosphere shot.",
+        "use": "hero",
+        "priority": 2,
+        "tags": ["bowling", "neon", "led", "purple", "lanes", "atmosphere"]
+      },
+      {
+        "file": "venue-bowling-lounge-neon-dining-exterior.jpg",
+        "width": 859,
+        "height": 645,
+        "source": "restaurantguru.com.br",
+        "description": "Collage showing bowling lounge with blue neon accent lighting, dining space with neon 'Momentos' sign, exterior with giant bowling pins and ball, and bar interior. Comprehensive venue showcase.",
+        "use": "hero",
+        "priority": 3,
+        "tags": ["bowling", "neon", "dining", "exterior", "lounge", "atmosphere"]
+      },
+      {
+        "file": "banner-conheca-tijucas-official.png",
+        "width": 1920,
+        "height": 635,
+        "format": "PNG",
+        "source": "conhecatijucas.com.br",
+        "description": "Official banner image from Tijucas tourism website - wide format, high resolution (1920x635). Shows venue overview.",
+        "use": "hero",
+        "priority": 4,
+        "tags": ["banner", "wide", "official", "tourism"]
+      }
+    ],
+    "venue": [
+      {
+        "file": "venue-interior-dining-area.jpg",
+        "width": 500,
+        "height": 350,
+        "source": "conhecatijucas.com.br",
+        "description": "Interior dining area with tables and ambient lighting",
+        "use": "venue",
+        "priority": 1,
+        "tags": ["interior", "dining", "tables", "ambient"]
+      },
+      {
+        "file": "venue-interior-bar-seating.jpg",
+        "width": 500,
+        "height": 350,
+        "source": "conhecatijucas.com.br",
+        "description": "Bar seating area with stools and counter",
+        "use": "venue",
+        "priority": 2,
+        "tags": ["interior", "bar", "seating", "counter"]
+      },
+      {
+        "file": "venue-interior-overview.jpg",
+        "width": 500,
+        "height": 350,
+        "source": "conhecatijucas.com.br",
+        "description": "Overview of interior space showing full venue layout",
+        "use": "venue",
+        "priority": 3,
+        "tags": ["interior", "overview", "layout"]
+      },
+      {
+        "file": "venue-interior-wide-angle.jpg",
+        "width": 885,
+        "height": 645,
+        "source": "restaurantguru.com.br",
+        "description": "Wide-angle interior shot showing the full venue space",
+        "use": "venue",
+        "priority": 4,
+        "tags": ["interior", "wide-angle", "space"]
+      },
+      {
+        "file": "venue-interior-bar-area.jpg",
+        "width": 483,
+        "height": 645,
+        "source": "restaurantguru.com.br",
+        "description": "Interior bar area with lighting and decor",
+        "use": "venue",
+        "priority": 5,
+        "tags": ["interior", "bar", "decor"]
+      },
+      {
+        "file": "venue-interior-panoramic-lounge.jpg",
+        "width": 500,
+        "height": 280,
+        "source": "vipsocial.com.br",
+        "description": "Panoramic view of the lounge area with industrial-style ceiling, wooden tables, hanging greenery, and floor-to-ceiling windows with twilight view",
+        "use": "venue",
+        "priority": 6,
+        "tags": ["interior", "panoramic", "lounge", "windows", "industrial"]
+      },
+      {
+        "file": "venue-interior-entrance-area.jpg",
+        "width": 500,
+        "height": 280,
+        "source": "vipsocial.com.br",
+        "description": "Entrance/lobby area of the venue",
+        "use": "venue",
+        "priority": 7,
+        "tags": ["interior", "entrance", "lobby"]
+      },
+      {
+        "file": "venue-interior-seating-area.jpg",
+        "width": 500,
+        "height": 280,
+        "source": "vipsocial.com.br",
+        "description": "Indoor seating area with tables and chairs",
+        "use": "venue",
+        "priority": 8,
+        "tags": ["interior", "seating", "tables"]
+      },
+      {
+        "file": "venue-exterior-building.jpg",
+        "width": 510,
+        "height": 645,
+        "source": "restaurantguru.com.br",
+        "description": "Exterior view of the building showing the venue facade",
+        "use": "venue",
+        "priority": 9,
+        "tags": ["exterior", "building", "facade"]
+      },
+      {
+        "file": "venue-atmosphere-1.jpg",
+        "width": 410,
+        "height": 645,
+        "source": "restaurantguru.com.br",
+        "description": "Atmospheric shot showing venue ambiance and lighting",
+        "use": "venue",
+        "priority": 10,
+        "tags": ["atmosphere", "ambiance", "lighting"]
+      },
+      {
+        "file": "venue-atmosphere-2.jpg",
+        "width": 848,
+        "height": 645,
+        "source": "restaurantguru.com.br",
+        "description": "Atmospheric venue shot showing the overall vibe and design",
+        "use": "venue",
+        "priority": 11,
+        "tags": ["atmosphere", "vibe", "design"]
+      },
+      {
+        "file": "venue-logo-wall-green-backdrop.jpg",
+        "width": 500,
+        "height": 280,
+        "source": "vipsocial.com.br",
+        "description": "Green artificial foliage backdrop wall with 'OTHER BOWLING BAR' circular logo and 'SINCE 2017' text, used as photo wall",
+        "use": "venue",
+        "priority": 12,
+        "tags": ["logo", "wall", "backdrop", "green", "branding"]
+      },
+      {
+        "file": "venue-logo-wall-balloon-arch-bowling-pin.jpg",
+        "width": 1024,
+        "height": 682,
+        "source": "vipsocial.com.br",
+        "description": "Logo wall with 'other' text and 'OTHER BOWLING BAR - SINCE 2017' circular logo, framed by gold/black balloon arches, giant decorative bowling pin, wooden tables in foreground. High resolution.",
+        "use": "venue",
+        "priority": 13,
+        "tags": ["logo", "wall", "balloons", "bowling-pin", "event", "branding"]
+      },
+      {
+        "file": "venue-bowling-lanes-setup-construction.jpg",
+        "width": 720,
+        "height": 405,
+        "source": "galeramix.com.br",
+        "description": "Bowling lanes during setup/construction phase with purple lighting, checkered ceiling panels, hanging greenery, showing the build-out of the interactive lanes",
+        "use": "venue",
+        "priority": 14,
+        "tags": ["bowling", "construction", "setup", "behind-the-scenes"]
+      }
+    ],
+    "menu_item": [
+      {
+        "file": "food-pizza-shredded-meat-closeup.jpg",
+        "width": 645,
+        "height": 645,
+        "source": "restaurantguru.com.br",
+        "description": "Close-up top-down view of artisanal pizza with shredded/pulled meat and white sauce drizzle, herbs. Professional food photography.",
+        "use": "menu_item",
+        "category": "pizza",
+        "priority": 1,
+        "tags": ["pizza", "shredded-meat", "artisanal", "closeup"]
+      },
+      {
+        "file": "food-pizza-margherita-basil.jpg",
+        "width": 500,
+        "height": 350,
+        "source": "conhecatijucas.com.br",
+        "description": "Margherita-style pizza with fresh tomato slices, basil leaves, and melted mozzarella",
+        "use": "menu_item",
+        "category": "pizza",
+        "priority": 2,
+        "tags": ["pizza", "margherita", "basil", "tomato"]
+      },
+      {
+        "file": "food-pizza-shredded-meat.jpg",
+        "width": 645,
+        "height": 645,
+        "source": "restaurantguru.com.br",
+        "description": "Another pizza variation with shredded meat topping, professional presentation",
+        "use": "menu_item",
+        "category": "pizza",
+        "priority": 3,
+        "tags": ["pizza", "meat", "topping"]
+      },
+      {
+        "file": "food-pizza-slice-plated.jpg",
+        "width": 500,
+        "height": 350,
+        "source": "conhecatijucas.com.br",
+        "description": "Pizza slice plated on dark plate with braised/pulled meat and grated cheese",
+        "use": "menu_item",
+        "category": "pizza",
+        "priority": 4,
+        "tags": ["pizza", "slice", "plated"]
+      },
+      {
+        "file": "food-pizza-overhead-view.jpg",
+        "width": 500,
+        "height": 350,
+        "source": "conhecatijucas.com.br",
+        "description": "Overhead view of pizza preparation",
+        "use": "menu_item",
+        "category": "pizza",
+        "priority": 5,
+        "tags": ["pizza", "overhead", "preparation"]
+      },
+      {
+        "file": "food-pizza-slice-closeup.jpg",
+        "width": 500,
+        "height": 350,
+        "source": "conhecatijucas.com.br",
+        "description": "Close-up of pizza slice showing toppings and crust detail",
+        "use": "menu_item",
+        "category": "pizza",
+        "priority": 6,
+        "tags": ["pizza", "slice", "closeup"]
+      },
+      {
+        "file": "food-burger-platter.jpg",
+        "width": 500,
+        "height": 350,
+        "source": "conhecatijucas.com.br",
+        "description": "Burger/food platter - potential 'The Ones' burger line item",
+        "use": "menu_item",
+        "category": "burger",
+        "priority": 1,
+        "tags": ["burger", "platter", "the-ones"]
+      },
+      {
+        "file": "food-platter-variety.jpg",
+        "width": 500,
+        "height": 350,
+        "source": "conhecatijucas.com.br",
+        "description": "Variety food platter showing multiple menu items",
+        "use": "menu_item",
+        "category": "platter",
+        "priority": 1,
+        "tags": ["platter", "variety", "sharing"]
+      },
+      {
+        "file": "food-platters-spread.jpg",
+        "width": 1225,
+        "height": 645,
+        "source": "restaurantguru.com.br",
+        "description": "Wide shot of multiple food platters spread across a table - good for showing menu variety",
+        "use": "menu_item",
+        "category": "platter",
+        "priority": 2,
+        "tags": ["platter", "spread", "table", "variety"]
+      },
+      {
+        "file": "food-meals-variety.jpg",
+        "width": 1085,
+        "height": 645,
+        "source": "restaurantguru.com.br",
+        "description": "Various meal options showing the breadth of the menu",
+        "use": "menu_item",
+        "category": "meals",
+        "priority": 1,
+        "tags": ["meals", "variety", "menu"]
+      },
+      {
+        "file": "food-dish-presentation.jpg",
+        "width": 500,
+        "height": 350,
+        "source": "conhecatijucas.com.br",
+        "description": "Professionally plated dish presentation",
+        "use": "menu_item",
+        "category": "dish",
+        "priority": 1,
+        "tags": ["dish", "presentation", "plating"]
+      },
+      {
+        "file": "food-plate-gourmet.jpg",
+        "width": 500,
+        "height": 350,
+        "source": "conhecatijucas.com.br",
+        "description": "Gourmet plate with artistic presentation",
+        "use": "menu_item",
+        "category": "dish",
+        "priority": 2,
+        "tags": ["gourmet", "plate", "presentation"]
+      },
+      {
+        "file": "food-chocolate-mousse-dessert.jpg",
+        "width": 483,
+        "height": 645,
+        "source": "restaurantguru.com.br",
+        "description": "Chocolate mousse dessert - vertical format, good for menu display",
+        "use": "menu_item",
+        "category": "dessert",
+        "priority": 1,
+        "tags": ["dessert", "chocolate", "mousse"]
+      },
+      {
+        "file": "food-spread-with-exterior.jpg",
+        "width": 515,
+        "height": 645,
+        "source": "restaurantguru.com.br",
+        "description": "Food spread with partial exterior view visible",
+        "use": "menu_item",
+        "category": "platter",
+        "priority": 3,
+        "tags": ["food", "spread", "exterior"]
+      }
+    ],
+    "promo": [
+      {
+        "file": "food-beer-chopp.jpg",
+        "width": 1146,
+        "height": 645,
+        "source": "restaurantguru.com.br",
+        "description": "Beer/chopp with food pairing - wide format great for promotional banners. Shows the chopp gelado experience.",
+        "use": "promo",
+        "priority": 1,
+        "tags": ["beer", "chopp", "promo", "drinks", "wide"]
+      },
+      {
+        "file": "food-cocktail-drink.jpg",
+        "width": 484,
+        "height": 645,
+        "source": "restaurantguru.com.br",
+        "description": "Cocktail/drink presentation - vertical format for social media or drink menu",
+        "use": "promo",
+        "priority": 2,
+        "tags": ["cocktail", "drink", "promo"]
+      },
+      {
+        "file": "food-cocktail-strawberry-hurricane.jpg",
+        "width": 500,
+        "height": 350,
+        "source": "conhecatijucas.com.br",
+        "description": "Tropical cocktail in hurricane glass with strawberry garnish, professional food photography on dark background",
+        "use": "promo",
+        "priority": 3,
+        "tags": ["cocktail", "strawberry", "tropical", "hurricane-glass"]
+      },
+      {
+        "file": "event-inauguration-interview-host.jpg",
+        "width": 500,
+        "height": 280,
+        "source": "vipsocial.com.br",
+        "description": "Interview/host shot during inauguration event - shows venue branding and green backdrop wall",
+        "use": "promo",
+        "priority": 4,
+        "tags": ["event", "inauguration", "interview", "branding"]
+      },
+      {
+        "file": "event-inauguration-crowd.jpg",
+        "width": 500,
+        "height": 280,
+        "source": "vipsocial.com.br",
+        "description": "Crowd at inauguration event showing community engagement",
+        "use": "promo",
+        "priority": 5,
+        "tags": ["event", "crowd", "inauguration", "community"]
+      },
+      {
+        "file": "event-inauguration-bowling-lanes.jpg",
+        "width": 500,
+        "height": 280,
+        "source": "vipsocial.com.br",
+        "description": "Bowling lanes during inauguration event with lighting effects",
+        "use": "promo",
+        "priority": 6,
+        "tags": ["event", "bowling", "lanes", "inauguration"]
+      },
+      {
+        "file": "event-inauguration-people-playing.jpg",
+        "width": 500,
+        "height": 280,
+        "source": "vipsocial.com.br",
+        "description": "People playing bowling during inauguration - shows the experience in action",
+        "use": "promo",
+        "priority": 7,
+        "tags": ["event", "bowling", "people", "playing", "experience"]
+      },
+      {
+        "file": "event-inauguration-group-photo.jpg",
+        "width": 500,
+        "height": 280,
+        "source": "vipsocial.com.br",
+        "description": "Group photo during inauguration event",
+        "use": "promo",
+        "priority": 8,
+        "tags": ["event", "group", "inauguration"]
+      },
+      {
+        "file": "event-inauguration-bowling-action.jpg",
+        "width": 500,
+        "height": 280,
+        "source": "vipsocial.com.br",
+        "description": "Bowling action shot during inauguration",
+        "use": "promo",
+        "priority": 9,
+        "tags": ["event", "bowling", "action"]
+      },
+      {
+        "file": "event-inauguration-venue-shot.jpg",
+        "width": 500,
+        "height": 280,
+        "source": "vipsocial.com.br",
+        "description": "Venue shot during inauguration showing full space",
+        "use": "promo",
+        "priority": 10,
+        "tags": ["event", "venue", "inauguration"]
+      },
+      {
+        "file": "event-inauguration-bowling-lanes-2.jpg",
+        "width": 500,
+        "height": 280,
+        "source": "vipsocial.com.br",
+        "description": "Additional bowling lanes shot from inauguration",
+        "use": "promo",
+        "priority": 11,
+        "tags": ["event", "bowling", "lanes"]
+      },
+      {
+        "file": "event-inauguration-atmosphere.jpg",
+        "width": 500,
+        "height": 280,
+        "source": "vipsocial.com.br",
+        "description": "Atmospheric shot from inauguration event",
+        "use": "promo",
+        "priority": 12,
+        "tags": ["event", "atmosphere", "inauguration"]
+      },
+      {
+        "file": "event-inauguration-decorations.jpg",
+        "width": 500,
+        "height": 280,
+        "source": "vipsocial.com.br",
+        "description": "Event decorations and setup during inauguration",
+        "use": "promo",
+        "priority": 13,
+        "tags": ["event", "decorations", "inauguration"]
+      }
+    ]
+  },
+  "summary": {
+    "total_photos": 46,
+    "by_category": {
+      "logo": 1,
+      "hero": 4,
+      "venue": 14,
+      "menu_item": 14,
+      "promo": 13
+    },
+    "by_source": {
+      "otherbowlingbar.com": 1,
+      "conhecatijucas.com.br": 14,
+      "restaurantguru.com.br": 11,
+      "galeramix.com.br": 2,
+      "vipsocial.com.br": 18
+    },
+    "key_features_captured": [
+      "Interactive bowling lanes with koi fish projection mapping",
+      "Purple/LED neon bowling lane lighting",
+      "Bar area with 'CHOPES' neon sign",
+      "Dining area with 'Momentos' neon sign",
+      "Green foliage logo wall with 'OTHER BOWLING BAR - SINCE 2017'",
+      "Giant decorative bowling pins at exterior",
+      "Industrial-style interior with hanging greenery",
+      "Artisanal pizzas (multiple varieties)",
+      "Burger platters",
+      "Cocktails and chopp/beer",
+      "Chocolate mousse dessert",
+      "Inauguration event photos (Nov 2024)",
+      "Official dark logotype SVG"
+    ],
+    "notes": [
+      "Instagram @othertijucas requires login - could not scrape directly",
+      "TripAdvisor blocked with CAPTCHA",
+      "iFood/Rappi/Goomer listings not found for this venue",
+      "Google Maps listing exists but photos require interactive browsing",
+      "Restaurant Guru aggregated Google photos (61 total, downloaded best 11)",
+      "Conheça Tijucas tourism page had official gallery (13 photos)",
+      "VipSocial had 2 news articles with inauguration coverage (15 photos)",
+      "Galera Mix had 2 news article photos showing bowling lanes",
+      "No 'The Ones' burger line photos found specifically - burger photos are generic",
+      "Logo SVG available from official website in dark variant"
+    ]
+  }
+}

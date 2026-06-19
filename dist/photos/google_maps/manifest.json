@@ -1,0 +1,314 @@
+{
+  "venue": "Other Bowling Bar",
+  "location": "R. Cel. Gallotti, 431 - Centro, Tijucas - SC, 88200-000",
+  "rating": "4.7/5 (472 Google reviews)",
+  "sources": [
+    "Google Maps",
+    "Restaurant Guru",
+    "Flickr (Inauguration album by VipSocial)",
+    "Conheça Tijucas tourism website"
+  ],
+  "photos": {
+    "exterior_entrance": [
+      {
+        "filename": "exterior-neon-sign-bowling-pins-sculptures.jpg",
+        "source": "Conheça Tijucas",
+        "description": "Exterior at night with 'Other' neon cursive sign, three oversized decorative bowling pin sculptures and a red bowling ball at the entrance",
+        "category": "exterior",
+        "quality": "high"
+      },
+      {
+        "filename": "collage-exterior-dining-drinks-food.jpg",
+        "source": "Restaurant Guru",
+        "description": "Collage showing teal exterior building, interior dining area, beer tap being poured, and food items",
+        "category": "exterior",
+        "quality": "medium"
+      }
+    ],
+    "bowling_lanes_interactive": [
+      {
+        "filename": "bowling-lanes-interior-neon-lighting.jpg",
+        "source": "Google Maps",
+        "description": "Main bowling lanes with purple/blue neon lighting, cosmic nebula display screen at the end, interactive touchscreen consoles, bowling ball rack, hanging greenery, and bar area visible",
+        "category": "bowling_lanes",
+        "quality": "high"
+      },
+      {
+        "filename": "bowling-lanes-cosmic-neon-blue-purple.jpg",
+        "source": "Conheça Tijucas",
+        "description": "Multiple bowling lanes with cosmic galaxy display screen, blue/purple ambient lighting, overhead TV monitors showing 'Other Bowling Bar', cushioned seating area",
+        "category": "bowling_lanes",
+        "quality": "high"
+      },
+      {
+        "filename": "bowling-lanes-full-view-cosmic-display.jpg",
+        "source": "Flickr",
+        "description": "Full panoramic view of bowling lanes with cosmic nebula wall display, purple/blue neon underlighting on gutters, interactive touchscreen stations, hanging plants, and lounge seating",
+        "category": "bowling_lanes",
+        "quality": "high"
+      },
+      {
+        "filename": "bowling-lounge-interactive-kiosks-balls.jpg",
+        "source": "Flickr",
+        "description": "Bowling lounge/waiting zone with 4 interactive touchscreen kiosks showing bowling game interfaces, colorful bowling ball selection display, wooden bench seating, 'BOWLING' text on wall, overhead TVs",
+        "category": "bowling_lanes",
+        "quality": "high"
+      },
+      {
+        "filename": "collage-interior-bowling-lanes-food-people.jpg",
+        "source": "Restaurant Guru",
+        "description": "Collage showing bowling lanes with 'SLIPPERY WHEN WET' text, overhead ceiling view with TV monitors, group of people socializing, and food/beer on table",
+        "category": "bowling_lanes",
+        "quality": "medium"
+      },
+      {
+        "filename": "dining-bowling-combined-space-overview.jpg",
+        "source": "Flickr",
+        "description": "Combined dining and bowling space overview showing rows of wooden tables, booth seating, bowling lanes in background with blue neon lighting, cosmic wall mural, inflatable bowling pin decoration",
+        "category": "bowling_lanes",
+        "quality": "high"
+      }
+    ],
+    "food_drink_area": [
+      {
+        "filename": "food-artisan-pizzas-topdown.jpg",
+        "source": "Conheça Tijucas",
+        "description": "Top-down view of multiple artisanal pizzas including pulled pork with cream drizzle, tomato/basil, and red onion varieties on dark background",
+        "category": "food",
+        "quality": "high"
+      },
+      {
+        "filename": "food-margherita-pizza-closeup.jpg",
+        "source": "Conheça Tijucas",
+        "description": "Close-up of Neapolitan-style Margherita pizza with charred crust, melted mozzarella, fresh tomato slices, basil leaves, and olive oil drizzle",
+        "category": "food",
+        "quality": "high"
+      },
+      {
+        "filename": "food-dessert-pizza-strawberry-wine.jpg",
+        "source": "Conheça Tijucas",
+        "description": "Dessert pizza with chocolate/Nutella spread and fresh strawberry slices, paired with Cabernet Sauvignon wine on red checkered tablecloth",
+        "category": "food",
+        "quality": "high"
+      },
+      {
+        "filename": "food-pizza-slice-cheese-pull.jpg",
+        "source": "Conheça Tijucas",
+        "description": "Pizza slice being lifted showing melted cheese pull, topped with shredded chicken, with beer bottle in background",
+        "category": "food",
+        "quality": "high"
+      },
+      {
+        "filename": "food-dessert-pizza-chocolate-coconut.jpg",
+        "source": "Conheça Tijucas",
+        "description": "Dessert pizza with chocolate spread and white coconut shavings on black plate, served on red checkered tablecloth",
+        "category": "food",
+        "quality": "high"
+      },
+      {
+        "filename": "food-pub-spread-fries-grilled-meat.jpg",
+        "source": "Conheca Tijucas",
+        "description": "Pub-style food spread with golden french fries, breaded fried items, grilled meat with melted cheese and tomato garnish",
+        "category": "food",
+        "quality": "high"
+      },
+      {
+        "filename": "food-burger-meal-fries-rings.jpg",
+        "source": "Conheça Tijucas",
+        "description": "Gourmet burger with brioche bun, beef patty, cheddar, lettuce, onion, tomato, served with thick potato wedges and onion rings with dipping sauces",
+        "category": "food",
+        "quality": "high"
+      },
+      {
+        "filename": "drinks-strawberry-cocktail.jpg",
+        "source": "Conheça Tijucas",
+        "description": "Refreshing pinkish-red strawberry cocktail in hurricane glass with crushed ice, fresh fruit chunks, and whole strawberry garnish",
+        "category": "drinks",
+        "quality": "high"
+      },
+      {
+        "filename": "drinks-beer-dinner-pairing.jpg",
+        "source": "Restaurant Guru",
+        "description": "Beer being served alongside dinner, showcasing the bar's craft beer selection and food pairing",
+        "category": "drinks",
+        "quality": "high"
+      },
+      {
+        "filename": "drinks-cocktails-strawberry.jpg",
+        "source": "Restaurant Guru",
+        "description": "Cocktail and drink selection showcasing the bar's beverage offerings",
+        "category": "drinks",
+        "quality": "medium"
+      },
+      {
+        "filename": "food-pizza-closeup-artisan.jpg",
+        "source": "Restaurant Guru",
+        "description": "Close-up of artisanal pizza showing quality ingredients and presentation",
+        "category": "food",
+        "quality": "high"
+      },
+      {
+        "filename": "food-plates-overview-spread.jpg",
+        "source": "Restaurant Guru",
+        "description": "Overview of multiple food plates showing the variety of menu offerings",
+        "category": "food",
+        "quality": "high"
+      },
+      {
+        "filename": "food-meals-display-platters.jpg",
+        "source": "Restaurant Guru",
+        "description": "Display of meal platters showcasing restaurant's food presentation",
+        "category": "food",
+        "quality": "high"
+      },
+      {
+        "filename": "food-chocolate-mousse-dessert.jpg",
+        "source": "Restaurant Guru",
+        "description": "Chocolate mousse dessert showcasing the sweet menu offerings",
+        "category": "food",
+        "quality": "high"
+      },
+      {
+        "filename": "dining-area-bowling-decor-galaxy-mural.jpg",
+        "source": "Conheça Tijucas",
+        "description": "Dining area with wooden tables, X-back chairs, dark booth seating, bowling theme decor, galaxy/star mural, blue accent lighting, and hanging greenery",
+        "category": "food_drink_area",
+        "quality": "high"
+      }
+    ],
+    "arcade_gaming_area": [
+      {
+        "filename": "arcade-cabinets-sonic-blue-neon.jpg",
+        "source": "Flickr",
+        "description": "Arcade game cabinets lineup with Sonic the Hedgehog and other classic games, blue/purple neon wall lighting, reflective floor, modern gaming lounge atmosphere",
+        "category": "arcade",
+        "quality": "high"
+      },
+      {
+        "filename": "arcade-daytona-usa-racing-simulator.jpg",
+        "source": "Conheça Tijucas",
+        "description": "Person playing Sega Daytona USA deluxe arcade racing simulator with steering wheel, bucket racing seat, blue ambient lighting, classic 90s 3D graphics on screen",
+        "category": "arcade",
+        "quality": "high"
+      },
+      {
+        "filename": "gaming-dining-area-game-over-neon.jpg",
+        "source": "Flickr",
+        "description": "Gaming-themed dining area with 'GAME OVER' illuminated letters, blue neon strip lights, galaxy wall mural, wooden tables, dark booth seating, gaming lounge atmosphere",
+        "category": "arcade",
+        "quality": "high"
+      }
+    ],
+    "branding_events": [
+      {
+        "filename": "brand-logo-green-wall-balloon-decor.jpg",
+        "source": "Flickr",
+        "description": "Decorative photo wall with 'OTHER BOWLING BAR SINCE 2017' white logo on artificial green foliage wall, framed by gold/black/white/silver balloon garland, inflatable bowling pin",
+        "category": "branding",
+        "quality": "high"
+      },
+      {
+        "filename": "brand-logo-backdrop-balloon-arch.jpg",
+        "source": "Flickr",
+        "description": "Same green wall logo backdrop from different angle with elaborate balloon arch arrangement",
+        "category": "branding",
+        "quality": "high"
+      },
+      {
+        "filename": "logo-backdrop-green-wall-balloon-arch.jpg",
+        "source": "Conheça Tijucas",
+        "description": "Logo backdrop with 'OTHER BOWLING BAR SINCE 2017' on green foliage wall with metallic gold, silver, black and white balloon arch",
+        "category": "branding",
+        "quality": "high"
+      },
+      {
+        "filename": "staff-team-photo-branded-shirts.jpg",
+        "source": "Flickr",
+        "description": "Group photo of approximately 15 staff members wearing matching black 'Other Bowling' branded t-shirts, posed in front of green wall with logo and balloon decorations",
+        "category": "branding",
+        "quality": "high"
+      }
+    ],
+    "general_venue": [
+      {
+        "filename": "interior-design-detail-view.jpg",
+        "source": "Restaurant Guru",
+        "description": "Interior design detail showing the venue's modern aesthetic and decor",
+        "category": "interior",
+        "quality": "high"
+      },
+      {
+        "filename": "interior-overview-wide-angle.jpg",
+        "source": "Restaurant Guru",
+        "description": "Wide-angle interior overview showing the venue layout and atmosphere",
+        "category": "interior",
+        "quality": "high"
+      },
+      {
+        "filename": "interior-seating-tables-booth.jpg",
+        "source": "Restaurant Guru",
+        "description": "Interior seating area with tables and booth arrangement",
+        "category": "interior",
+        "quality": "high"
+      },
+      {
+        "filename": "venue-overview-angle-1.jpg",
+        "source": "Restaurant Guru",
+        "description": "General venue overview from angle 1",
+        "category": "interior",
+        "quality": "medium"
+      },
+      {
+        "filename": "venue-overview-angle-2.jpg",
+        "source": "Restaurant Guru",
+        "description": "General venue overview from angle 2",
+        "category": "interior",
+        "quality": "medium"
+      },
+      {
+        "filename": "collage-food-exterior-mixed.jpg",
+        "source": "Restaurant Guru",
+        "description": "Mixed collage of food and exterior views",
+        "category": "mixed",
+        "quality": "medium"
+      },
+      {
+        "filename": "inauguration-event-interior-03.jpg",
+        "source": "Flickr",
+        "description": "Interior view from inauguration event November 2024",
+        "category": "interior",
+        "quality": "medium"
+      },
+      {
+        "filename": "inauguration-event-interior-05.jpg",
+        "source": "Flickr",
+        "description": "Interior view from inauguration event November 2024",
+        "category": "interior",
+        "quality": "medium"
+      },
+      {
+        "filename": "inauguration-event-interior-08.jpg",
+        "source": "Flickr",
+        "description": "Interior view from inauguration event November 2024",
+        "category": "interior",
+        "quality": "medium"
+      },
+      {
+        "filename": "inauguration-event-interior-11.jpg",
+        "source": "Flickr",
+        "description": "Interior view from inauguration event November 2024",
+        "category": "interior",
+        "quality": "medium"
+      }
+    ]
+  },
+  "total_photos": 40,
+  "summary": {
+    "exterior_entrance": 2,
+    "bowling_lanes_interactive": 6,
+    "food_drink_area": 15,
+    "arcade_gaming_area": 3,
+    "branding_events": 4,
+    "general_venue": 10
+  }
+}

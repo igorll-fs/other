@@ -1,0 +1,86 @@
+{
+  "source": "Instagram @othertijucas",
+  "scraped_at": "2026-06-19",
+  "photos": [
+    {
+      "filename": "01-the-ones-burger-line.jpg",
+      "description": "The Ones burger line promotion - artisan blend burgers on display, Instagram carousel post showing the full burger lineup",
+      "suggested_section": "promo",
+      "alt_text": "Parou de rolar o feed pra passar vontade, agora e hora de fazer o seu pedido. A nossa nova linha The Ones ta toda na chapa e pronta pro play",
+      "category": "food",
+      "tags": ["burgers", "the-ones", "food-lineup", "promo"]
+    },
+    {
+      "filename": "02-burger-closeup-carbs.jpg",
+      "description": "Close-up of smash burger with melting cheese and crispy edges - dramatic food photography showing juicy patty",
+      "suggested_section": "gallery",
+      "alt_text": "Cortando os carboidratos na forca do odio. Aproveita que a chapa ja ta quente e vem aplicar essa tecnica aqui na Other",
+      "category": "food",
+      "tags": ["burger", "closeup", "smash-burger", "cheese"]
+    },
+    {
+      "filename": "03-strawberry-gin-drink.jpg",
+      "description": "Strawberry gin cocktail - weekly drink special beautifully presented at the bar counter",
+      "suggested_section": "gallery",
+      "alt_text": "Drink da semana - gin de morango, feito para quem quer algo refrescante e direto ao ponto",
+      "category": "drinks",
+      "tags": ["cocktail", "gin", "strawberry", "weekly-special", "drinks"]
+    },
+    {
+      "filename": "04-game-day-burgers.jpg",
+      "description": "Game day special with burgers and Brazilian flag - sports viewing atmosphere at the venue",
+      "suggested_section": "promo",
+      "alt_text": "Ja completou seu album pro jogo de hoje? Burgers with Brazil flag for game day",
+      "category": "events",
+      "tags": ["game-day", "sports", "burgers", "events", "brazil"]
+    },
+    {
+      "filename": "05-bowling-date-night.jpg",
+      "description": "Valentine's date night combo showing bowling lanes, pizza, wine and dessert - perfect date experience at Other",
+      "suggested_section": "hero",
+      "alt_text": "Um date que tem boliche, pizza, vinho e sobremesa gratis nao e um date, e um investimento na relacao. Dia dos Namorados combo",
+      "category": "venue",
+      "tags": ["bowling", "pizza", "date-night", "wine", "venue", "atmosphere"]
+    },
+    {
+      "filename": "06-the-cheese-one-burger.jpg",
+      "description": "The Cheese One - signature burger with overflowing melted cheese, close-up food shot from The Ones line",
+      "suggested_section": "gallery",
+      "alt_text": "The Cheese One - date perfeito com esse queijo todo dia 12. Marque o seu namorado",
+      "category": "food",
+      "tags": ["burger", "the-cheese-one", "cheese", "signature", "the-ones"]
+    },
+    {
+      "filename": "07-holiday-smash-burger.jpg",
+      "description": "Holiday smash burger with golden fries - perfect holiday meal promotion showing crispy burger and sides",
+      "suggested_section": "gallery",
+      "alt_text": "Esse feriadao pede Other, nao precisa cozinhar e nem inventar desculpa pra furar a dieta",
+      "category": "food",
+      "tags": ["burger", "fries", "holiday", "smash-burger"]
+    },
+    {
+      "filename": "08-the-ones-showcase.jpg",
+      "description": "Prazer, The Ones! - official showcase of the full burger line with melted cheese, showing artisan blends",
+      "suggested_section": "hero",
+      "alt_text": "Prazer, The Ones! A gente podia fazer um texto gigante explicando os blends artesanais, mas a gente sabe que voce so quer ver o queijo derretendo",
+      "category": "food",
+      "tags": ["the-ones", "burger-line", "showcase", "hero", "signature"]
+    },
+    {
+      "filename": "09-drinks-cocktail-menu.jpg",
+      "description": "Drinks and cocktail menu display - colorful cocktail options designed as fuel for your bowling strike, happy hour vibes",
+      "suggested_section": "gallery",
+      "alt_text": "Nossa carta de drinks foi desenhada para ser o combustivel oficial do seu strike. O som da coqueteleira ja e o nosso despertador preferido para o Happy Hour",
+      "category": "drinks",
+      "tags": ["drinks", "cocktails", "menu", "happy-hour", "bar"]
+    },
+    {
+      "filename": "10-valentine-burger-fries.jpg",
+      "description": "Valentine's special burger and fries with flowers - romantic food promotion showing burger as better than flowers",
+      "suggested_section": "promo",
+      "alt_text": "Flores? Bonito. Mas um burger suculento, batatinha crocante e a melhor companhia? Insuperavel",
+      "category": "food",
+      "tags": ["burger", "fries", "valentine", "promo", "romantic"]
+    }
+  ]
+}

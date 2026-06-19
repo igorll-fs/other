@@ -1,0 +1,583 @@
+{
+  "restaurant": {
+    "name": "Other Bowling Bar",
+    "type": "Bar & Restaurante",
+    "logo_url": "https://static.goomer.app/stores/330319/products/mobile_menu/templates/651317/logo_v1778080742.png",
+    "logo_local_path": "/tmp/other_restaurant/menu_photos/logo.png"
+  },
+  "categories": [
+    {
+      "name": "ENTRADAS",
+      "items": [
+        {
+          "name": "Mini Pastéis",
+          "description": "Porção com 12 unidades de mini pastéis deliciosos preparados e fritos na hora.",
+          "price": "R$ 33,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474312/assets/images/1425364.png?v=1776963967",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Mini_Pasteis.jpg"
+        },
+        {
+          "name": "Batata Frita",
+          "description": "Batatas finas e crocantes na medida certa.",
+          "price": "R$ 30,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474304/assets/images/1425346.png?v=1776963664",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Batata_Frita.jpg"
+        },
+        {
+          "name": "Batata Frita Rústica",
+          "description": "Batatas rústicas com casca, crocantes por fora e macias por dentro.",
+          "price": "R$ 34,50",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474308/assets/images/1397820.jpg?v=1775153421",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Batata_Frita_Rustica.jpg"
+        },
+        {
+          "name": "Batata Frita Rústica Temperada",
+          "description": "Batatas rústicas com casca, temperadas com especiarias e fritas até ficarem crocante.",
+          "price": "R$ 34,50",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474309/assets/images/1397823.jpg?v=1775153429",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Batata_Frita_Rustica_Temperada.jpg"
+        },
+        {
+          "name": "Aipim",
+          "description": "Aipim frito dourado, macio por dentro e levemente crocante por fora.",
+          "price": "R$ 34,50",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474302/assets/images/1397815.jpg?v=1775153329",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Aipim.jpg"
+        },
+        {
+          "name": "Anel de Cebola",
+          "description": "Anéis de cebola empanados, crocantes e dourados na medida certa.",
+          "price": "R$ 34,50",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474303/assets/images/1397817.jpg?v=1775153349",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Anel_de_Cebola.jpg"
+        },
+        {
+          "name": "Polenta",
+          "description": "Polenta tradicional, frita, crocante por fora e macia por dentro.",
+          "price": "R$ 31,50",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474310/assets/images/1397830.jpg?v=1775153682",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Polenta.jpg"
+        },
+        {
+          "name": "Torradas",
+          "description": "Torradas com recheios deliciosos à sua escolha.",
+          "price": "R$ 23,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474311/assets/images/1398338.jpg?v=1775162781",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Torradas.jpg"
+        }
+      ]
+    },
+    {
+      "name": "THE ONES",
+      "items": [
+        {
+          "name": "The Classic",
+          "description": "O clássico em sua melhor versão. Blend especial de 180g, cheddar, maionese defumada.",
+          "price": "R$ 39,90",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1560226/assets/images/1487363.png?v=1780508387",
+          "photo_path": "/tmp/other_restaurant/menu_photos/The_Classic.jpg"
+        },
+        {
+          "name": "The Cheese One",
+          "description": "Queijo nunca é demais né? Blend especial de 180g, cheddar duplo, maionese defumada.",
+          "price": "R$ 48,90",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1560221/assets/images/1487357.png?v=1780508210",
+          "photo_path": "/tmp/other_restaurant/menu_photos/The_Cheese_One.jpg"
+        },
+        {
+          "name": "The Bacon One",
+          "description": "A combinação que nunca falha. Blend especial de 180g, cheddar, maionese defumada, bacon.",
+          "price": "R$ 44,90",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1560217/assets/images/1487349.png?v=1780508112",
+          "photo_path": "/tmp/other_restaurant/menu_photos/The_Bacon_One.jpg"
+        },
+        {
+          "name": "The Double One",
+          "description": "Esse é pros esfomeados de plantão, e tá tudo bem. Dois blends especiais de 180g.",
+          "price": "R$ 53,90",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1560224/assets/images/1487361.png?v=1780508350",
+          "photo_path": "/tmp/other_restaurant/menu_photos/The_Double_One.jpg"
+        },
+        {
+          "name": "The Onion Club",
+          "description": "Aquele sabor que você já conhece, mas feito do jeito certo. Blend especial de 180g.",
+          "price": "R$ 44,90",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1560219/assets/images/1487353.png?v=1780508163",
+          "photo_path": "/tmp/other_restaurant/menu_photos/The_Onion_Club.jpg"
+        },
+        {
+          "name": "The Chicken Crispy",
+          "description": "Para quem sabe que frango crocante nunca sai de moda. Frango empanado crocante, cheddar.",
+          "price": "R$ 42,90",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1560229/assets/images/1487366.png?v=1780508471",
+          "photo_path": "/tmp/other_restaurant/menu_photos/The_Chicken_Crispy.jpg"
+        },
+        {
+          "name": "The Original One",
+          "description": "O tal do cheeseburguer americano. Blend especial de 180g, cheddar e maionese defumada.",
+          "price": "R$ 36,90",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1560211/assets/images/1487345.png?v=1780507996",
+          "photo_path": "/tmp/other_restaurant/menu_photos/The_Original_One.jpg"
+        }
+      ]
+    },
+    {
+      "name": "TRADICIONAIS",
+      "items": [
+        {
+          "name": "X-Salada",
+          "description": "Pão macio, hambúrguer artesanal de 120g, presunto e queijo mussarela, com alface fresca.",
+          "price": "R$ 25,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474334/assets/images/1425358.png?v=1776963882",
+          "photo_path": "/tmp/other_restaurant/menu_photos/X-Salada.jpg"
+        },
+        {
+          "name": "X-Burguer",
+          "description": "Pão macio com hambúrguer artesanal de 120g, presunto e queijo mussarela.",
+          "price": "R$ 20,00",
+          "photo_url": null,
+          "photo_path": null
+        },
+        {
+          "name": "X-Bacon",
+          "description": "Pão macio, hambúrguer artesanal de 120g, bacon em cubinhos crocante, presunto e queijo mussarela.",
+          "price": "R$ 28,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474326/assets/images/1425359.png?v=1776963898",
+          "photo_path": "/tmp/other_restaurant/menu_photos/X-Bacon.jpg"
+        },
+        {
+          "name": "X-Calabresa",
+          "description": "Pão macio, hambúrguer artesanal de 120g e calabresa saborosa, com presunto, queijo mussarela.",
+          "price": "R$ 28,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474329/assets/images/1407878.jpg?v=1775969811",
+          "photo_path": "/tmp/other_restaurant/menu_photos/X-Calabresa.jpg"
+        },
+        {
+          "name": "X-Burguer Duplo",
+          "description": "Pão macio com dois hambúrgueres artesanais de 120g cada, presunto e queijo cheddar.",
+          "price": "R$ 28,00",
+          "photo_url": null,
+          "photo_path": null
+        },
+        {
+          "name": "X-Coração",
+          "description": "Pão macio com coração macio e bem temperado, presunto e queijo mussarela.",
+          "price": "R$ 28,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474330/assets/images/1407876.jpg?v=1775969524",
+          "photo_path": "/tmp/other_restaurant/menu_photos/X-Coracao.jpg"
+        },
+        {
+          "name": "X-Egg",
+          "description": "Pão macio, hambúrguer artesanal de 120g, ovo, presunto e queijo mussarela.",
+          "price": "R$ 28,00",
+          "photo_url": null,
+          "photo_path": null
+        },
+        {
+          "name": "X-Frango",
+          "description": "Pão macio com frango suculento, presunto e queijo mussarela, acompanhado de alface.",
+          "price": "R$ 25,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474332/assets/images/1425357.png?v=1776963875",
+          "photo_path": "/tmp/other_restaurant/menu_photos/X-Frango.jpg"
+        },
+        {
+          "name": "X-Other",
+          "description": "O diferenciado da Other com tudo que tem direito: Pão macio, hambúrguer artesanal.",
+          "price": "R$ 32,00",
+          "photo_url": null,
+          "photo_path": null
+        }
+      ]
+    },
+    {
+      "name": "PIZZAS",
+      "items": [
+        {
+          "name": "Pizza Pequena (25cm)",
+          "description": "Pizza de massa artesanal (4 fatias), leve e saborosa, ideal para uma pessoa.",
+          "price": "R$ 38,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474367/assets/images/1407837.jpg?v=1775964105",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pizza_Pequena_25cm.jpg"
+        },
+        {
+          "name": "Pizza Média (30cm)",
+          "description": "Pizza de massa artesanal (8 fatias), equilibrada e perfeita para compartilhar.",
+          "price": "R$ 55,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474368/assets/images/1425347.png?v=1776963766",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pizza_Media_30cm.jpg"
+        },
+        {
+          "name": "Pizza Grande (35cm)",
+          "description": "Pizza de massa artesanal (12 fatias), ideal para grupos.",
+          "price": "R$ 80,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474369/assets/images/1407839.jpg?v=1775964113",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pizza_Grande_35cm.jpg"
+        },
+        {
+          "name": "Pizza Familia (45cm)",
+          "description": "Pizza de massa artesanal (16 fatias), perfeita para dividir.",
+          "price": "R$ 95,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1483040/assets/images/1407840.jpg?v=1775964116",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pizza_Familia_45cm.jpg"
+        }
+      ]
+    },
+    {
+      "name": "PORÇÕES",
+      "items": [
+        {
+          "name": "Porção Mista",
+          "description": "Mix de alcatra, calabresa, coração e frango, acompanhado de aipim, fritas, polenta.",
+          "price": "R$ 122,50",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474321/assets/images/1425351.png?v=1776963804",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Porcao_Mista.jpg"
+        },
+        {
+          "name": "Porção de Alcatra",
+          "description": "Alcatra suculenta na chapa, acompanhada de fritas na porção pequena.",
+          "price": "R$ 49,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474316/assets/images/1425354.png?v=1776963824",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Porcao_de_Alcatra.jpg"
+        },
+        {
+          "name": "Porção de Calabresa",
+          "description": "Calabresa dourada e saborosa, acompanhada de fritas na porção pequena.",
+          "price": "R$ 46,50",
+          "photo_url": null,
+          "photo_path": null
+        },
+        {
+          "name": "Porção de Coração",
+          "description": "Coração de frango bem temperado, acompanhado de fritas na porção pequena.",
+          "price": "R$ 46,50",
+          "photo_url": null,
+          "photo_path": null
+        },
+        {
+          "name": "Porção de Frango",
+          "description": "Frango suculento e bem temperado, acompanhado de fritas na porção pequena.",
+          "price": "R$ 46,50",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474319/assets/images/1425353.png?v=1776963820",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Porcao_de_Frango.jpg"
+        }
+      ]
+    },
+    {
+      "name": "FRUTOS DO MAR",
+      "items": [
+        {
+          "name": "Frutos do Mar Mistos",
+          "description": "Mix de camarão, lula e isca de peixe empanados, acompanhados de aipim, fritas, polenta.",
+          "price": "R$ 133,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474325/assets/images/1425375.png?v=1776964203",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Frutos_do_Mar_Mistos.jpg"
+        },
+        {
+          "name": "Camarão à Milanesa",
+          "description": "Camarões empanados e dourados, crocantes por fora e macios por dentro.",
+          "price": "R$ 119,00",
+          "photo_url": null,
+          "photo_path": null
+        },
+        {
+          "name": "Isca de Peixe à Milanesa",
+          "description": "Iscas de peixe empanadas, leves e crocantes, acompanhadas de aipim, fritas, polenta.",
+          "price": "R$ 103,50",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474323/assets/images/1425376.png?v=1776964214",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Isca_de_Peixe_a_Milanesa.jpg"
+        },
+        {
+          "name": "Lula à Milanesa",
+          "description": "Lulas empanadas e fritas na hora, macias e saborosas.",
+          "price": "R$ 119,00",
+          "photo_url": null,
+          "photo_path": null
+        }
+      ]
+    },
+    {
+      "name": "PASTÉIS TRADICIONAIS",
+      "items": [
+        {
+          "name": "Pastel de Pizza",
+          "description": "",
+          "price": "R$ 18,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474339/assets/images/1407846.jpg?v=1775964233",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pastel_de_Pizza.jpg"
+        },
+        {
+          "name": "Pastel de Calabresa",
+          "description": "",
+          "price": "R$ 18,00",
+          "photo_url": null,
+          "photo_path": null
+        },
+        {
+          "name": "Pastel de Carne",
+          "description": "",
+          "price": "R$ 18,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474341/assets/images/1407848.jpg?v=1775964246",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pastel_de_Carne.jpg"
+        },
+        {
+          "name": "Pastel de Queijo Cheddar",
+          "description": "",
+          "price": "R$ 18,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474342/assets/images/1407849.jpg?v=1775964250",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pastel_de_Queijo_Cheddar.jpg"
+        },
+        {
+          "name": "Pastel de Frango",
+          "description": "",
+          "price": "R$ 18,00",
+          "photo_url": null,
+          "photo_path": null
+        },
+        {
+          "name": "Pastel de Palmito",
+          "description": "",
+          "price": "R$ 18,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474344/assets/images/1407851.jpg?v=1775964256",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pastel_de_Palmito.jpg"
+        },
+        {
+          "name": "Pastel de Queijo Mussarela",
+          "description": "",
+          "price": "R$ 18,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474346/assets/images/1407852.jpg?v=1775964260",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pastel_de_Queijo_Mussarela.jpg"
+        }
+      ]
+    },
+    {
+      "name": "PASTÉIS ESPECIAIS",
+      "items": [
+        {
+          "name": "Pastel de Bacon com Cheddar",
+          "description": "",
+          "price": "R$ 20,00",
+          "photo_url": null,
+          "photo_path": null
+        },
+        {
+          "name": "Pastel de Calabresa com Catupiry",
+          "description": "",
+          "price": "R$ 20,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474348/assets/images/1407854.jpg?v=1775964264",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pastel_de_Calabresa_com_Catupiry.jpg"
+        },
+        {
+          "name": "Pastel de Carne com Catupiry",
+          "description": "",
+          "price": "R$ 20,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474349/assets/images/1407855.jpg?v=1775964270",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pastel_de_Carne_com_Catupiry.jpg"
+        },
+        {
+          "name": "Pastel de Carne com Mussarela",
+          "description": "",
+          "price": "R$ 20,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474350/assets/images/1407856.jpg?v=1775964271",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pastel_de_Carne_com_Mussarela.jpg"
+        },
+        {
+          "name": "Pastel de Frango com Catupiry",
+          "description": "",
+          "price": "R$ 20,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474351/assets/images/1407857.jpg?v=1775964277",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pastel_de_Frango_com_Catupiry.jpg"
+        },
+        {
+          "name": "Pastel de Carne com Cheddar",
+          "description": "",
+          "price": "R$ 20,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474352/assets/images/1407858.jpg?v=1775964280",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pastel_de_Carne_com_Cheddar.jpg"
+        },
+        {
+          "name": "Pastel de Bacon com Mussarela",
+          "description": "",
+          "price": "R$ 20,00",
+          "photo_url": null,
+          "photo_path": null
+        },
+        {
+          "name": "Pastel de Sensação Preto",
+          "description": "",
+          "price": "R$ 19,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474358/assets/images/1407865.jpg?v=1775964315",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pastel_de_Sensacao_Preto.jpg"
+        },
+        {
+          "name": "Pastel de Camarão",
+          "description": "",
+          "price": "R$ 25,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474354/assets/images/1407860.jpg?v=1775964289",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pastel_de_Camarao.jpg"
+        },
+        {
+          "name": "Pastel de Camarão com Catupiry",
+          "description": "",
+          "price": "R$ 27,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474355/assets/images/1407861.jpg?v=1775964291",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pastel_de_Camarao_com_Catupiry.jpg"
+        },
+        {
+          "name": "Pastel Other",
+          "description": "Carne, calabresa, presunto, catupiry e azeitona.",
+          "price": "R$ 25,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474356/assets/images/1407864.jpg?v=1775964311",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pastel_Other.jpg"
+        }
+      ]
+    },
+    {
+      "name": "PASTÉIS DOCES",
+      "items": [
+        {
+          "name": "Pastel de Prestígio Branco",
+          "description": "",
+          "price": "R$ 19,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474359/assets/images/1407866.jpg?v=1775964322",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pastel_de_Prestigio_Branco.jpg"
+        },
+        {
+          "name": "Pastel de Sensação Branco",
+          "description": "",
+          "price": "R$ 19,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474360/assets/images/1407867.jpg?v=1775964324",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pastel_de_Sensacao_Branco.jpg"
+        },
+        {
+          "name": "Pastel de Prestígio Preto",
+          "description": "",
+          "price": "R$ 19,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474361/assets/images/1407868.jpg?v=1775964326",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pastel_de_Prestigio_Preto.jpg"
+        },
+        {
+          "name": "Pastel de Chocolate Preto",
+          "description": "",
+          "price": "R$ 18,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474366/assets/images/1407862.jpg?v=1775964300",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pastel_de_Chocolate_Preto.jpg"
+        },
+        {
+          "name": "Pastel de Banana",
+          "description": "",
+          "price": "R$ 15,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474362/assets/images/1407842.jpg?v=1775964219",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pastel_de_Banana.jpg"
+        },
+        {
+          "name": "Pastel de Chocolate Branco",
+          "description": "",
+          "price": "R$ 18,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474363/assets/images/1407863.jpg?v=1775964302",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pastel_de_Chocolate_Branco.jpg"
+        },
+        {
+          "name": "Pastel de Dois Amores",
+          "description": "",
+          "price": "R$ 18,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474364/assets/images/1407845.jpg?v=1775964226",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pastel_de_Dois_Amores.jpg"
+        },
+        {
+          "name": "Pastel de Banana com Canela",
+          "description": "",
+          "price": "R$ 15,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474365/assets/images/1407844.jpg?v=1775964225",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Pastel_de_Banana_com_Canela.jpg"
+        }
+      ]
+    },
+    {
+      "name": "SOFT DRINKS",
+      "items": [
+        {
+          "name": "Garrafa de água Mineral",
+          "description": "500ml, escolha com ou sem gás.",
+          "price": "R$ 7,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474370/assets/images/1452058.png?v=1778715722",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Garrafa_de_agua_Mineral.jpg"
+        },
+        {
+          "name": "Suco de uva Del Valle",
+          "description": "Lata (290ml).",
+          "price": "R$ 7,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474371/assets/images/1392570.jpg?v=1774919712",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Suco_de_uva_Del_Valle.jpg"
+        },
+        {
+          "name": "H2OH! Tradicional",
+          "description": "500ml.",
+          "price": "R$ 9,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474372/assets/images/1392571.png?v=1774919733",
+          "photo_path": "/tmp/other_restaurant/menu_photos/H2OH_Tradicional.jpg"
+        },
+        {
+          "name": "Refrigerante lata",
+          "description": "350ml. Escolha a sua opção preferida.",
+          "price": "R$ 8,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474373/assets/images/1452093.png?v=1778716619",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Refrigerante_lata.jpg"
+        },
+        {
+          "name": "Refrigerante 600ml",
+          "description": "Escolha a sua opção preferida.",
+          "price": "R$ 10,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474374/assets/images/1452099.png?v=1778717286",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Refrigerante_600ml.jpg"
+        },
+        {
+          "name": "Refrigerante 2L",
+          "description": "Escolha a sua opção preferida.",
+          "price": "R$ 22,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474375/assets/images/1452128.png?v=1778718825",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Refrigerante_2L.jpg"
+        },
+        {
+          "name": "Red Bull",
+          "description": "Escolha a sua opção preferida.",
+          "price": "R$ 18,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474380/assets/images/1402275.png?v=1775676157",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Red_Bull.jpg"
+        }
+      ]
+    },
+    {
+      "name": "SUCOS",
+      "items": [
+        {
+          "name": "Suco garrafa 300 ml",
+          "description": "Suco preparado na hora com frutas naturais.",
+          "price": "R$ 13,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1539187/assets/images/1461097.png?v=1779243027",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Suco_garrafa_300_ml.jpg"
+        }
+      ]
+    },
+    {
+      "name": "CERVEJAS",
+      "items": [
+        {
+          "name": "Cerveja Long Neck",
+          "description": "330ml. Escolha sua gelada!",
+          "price": "R$ 13,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474421/assets/images/1402737.png?v=1775687992",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Cerveja_Long_Neck.jpg"
+        },
+        {
+          "name": "Cerveja Lata",
+          "description": "350ml. Escolha sua gelada!",
+          "price": "R$ 8,00",
+          "photo_url": "https://images.abrahao.com.br/x250/uploads/8241/product/1474422/assets/images/1402724.png?v=1775687679",
+          "photo_path": "/tmp/other_restaurant/menu_photos/Cerveja_Lata.jpg"
+        }
+      ]
+    }
+  ],
+  "total_items": 73,
+  "total_categories": 12
+}

@@ -1,0 +1,57 @@
+{
+  "restaurant": {
+    "name": "Other Bowling Bar",
+    "tagline": "A primeira pista de boliche 100% interativa de Santa Catarina",
+    "description": "Boliche, pizza, chopp, arcade, espaço kids, música ao vivo, drinks e comida. Experiências inesquecíveis te aguardam.",
+    "address": "Rua Coronel Gallotti, 431 — Centro, Tijucas, SC",
+    "cep": "88200-000",
+    "whatsapp": "5548998184413",
+    "whatsapp_display": "(48) 99818-4413",
+    "instagram": "@othertijucas",
+    "instagram_url": "https://www.instagram.com/othertijucas/",
+    "website": "otherbowlingbar.com",
+    "google_rating": 4.7,
+    "google_votes": 458,
+    "hours": {
+      "tue_sat": "18:00 — 00:00",
+      "sunday": "17:00 — 23:00",
+      "monday": "Fechado"
+    }
+  },
+  "features": [
+    {"icon": "🎳", "title": "Boliche Interativo", "desc": "Pistas com sensores que reagem à trajetória da bola, criando animações dinâmicas sobre a madeira."},
+    {"icon": "🍕", "title": "Pizza Artesanal", "desc": "Massa artesanal leve e saborosa, assada no forno a lenha."},
+    {"icon": "🍺", "title": "Chopp Gelado", "desc": "Chopp sempre gelado e na medida certa."},
+    {"icon": "🎮", "title": "Arcade/Flipperama", "desc": "Os melhores clássicos do arcade para se divertir entre as partidas."},
+    {"icon": "👶", "title": "Espaço Kids", "desc": "Área exclusiva para as crianças brincarem com segurança."},
+    {"icon": "🎵", "title": "Música ao Vivo", "desc": "Shows e performances ao vivo para animar sua noite."},
+    {"icon": "🍹", "title": "Drinks Autorais", "desc": "Drinks criativos feitos pelos nossos bartenders especializados."},
+    {"icon": "🛵", "title": "Delivery Rápido", "desc": "Peça pelo delivery e receba seus favoritos em casa."}
+  ],
+  "gallery": [
+    {"file": "photos/instagram/burger_highlight.jpg", "alt": "The Ones - linha de burgers artesanais", "caption": "A nova linha The Ones tá toda na chapa e pronta pro play! 🍔"},
+    {"file": "photos/instagram/pizza_reel.jpg", "alt": "Combo pizza e boliche para date", "caption": "Um date que tem boliche, pizza, vinho e sobremesa grátis não é um date, é um investimento. 🤌"},
+    {"file": "photos/instagram/venue_carousel.jpg", "alt": "Gin de morango - drink da semana", "caption": "O drink da vez é o nosso gin de morango, feito para quem quer algo refrescante. 🍹"},
+    {"file": "photos/instagram/bowling_pool.jpg", "alt": "Área de boliche e sinuca", "caption": "Parou de rolar o feed pra passar vontade, agora é hora de fazer o seu pedido! 👀"},
+    {"file": "photos/instagram/food_reel_june03.jpg", "alt": "Burgers para delivery", "caption": "Você já conhecia o nosso delivery? Curta a nova linha de burgers sem sair de casa! 🛵"},
+    {"file": "photos/instagram/photo_june09.jpg", "alt": "The Cheese One com queijo derretido", "caption": "The Cheese One — a resposta tá aqui: queijo derretido do jeito certo. 🧀🔥"}
+  ],
+  "reviews": [
+    {"name": "Mariana Silva", "initial": "M", "rating": 5, "text": "Lugar incrível! Boliche divertido e a pizza é sensacional! Voltarei com certeza com toda a família."},
+    {"name": "Carlos Eduardo", "initial": "C", "rating": 5, "text": "Perfeito para ir com a família. As crianças amaram o espaço kids e eu curti o chopp gelado!"},
+    {"name": "Rodrigo Santos", "initial": "R", "rating": 5, "text": "Os burgers The Ones são de outro nível. Recomendo o The Cheese One, muito queijo derretido!"},
+    {"name": "Amanda Costa", "initial": "A", "rating": 5, "text": "Ambiente top, drinks bons e atendimento rápido. O boliche interativo é sensacional!"},
+    {"name": "Felipe Almeida", "initial": "F", "rating": 4, "text": "O melhor lugar para Happy Hour em Tijucas! Pizza, boliche e chopp — combinação perfeita."}
+  ],
+  "menu_featured": [
+    {"name": "The Classic", "price": "R$ 39,90", "desc": "Blend suculento de 180g, queijo cheddar derretido e nossa exclusiva maionese defumada no pão brioche macio.", "photo": "photos/menu/The_Classic.jpg", "tag": "CAMPEÃO DE VENDAS"},
+    {"name": "The Cheese One", "price": "R$ 48,90", "desc": "Blend suculento de 180g, dobro de queijo cheddar derretido, molho especial artesanal no pão brioche tostado.", "photo": "photos/menu/The_Cheese_One.jpg", "tag": "MUITO QUEIJO"},
+    {"name": "The Bacon One", "price": "R$ 44,90", "desc": "Blend suculento de 180g, fatias crocantes de bacon premium, cheddar derretido e maionese defumada.", "photo": "photos/menu/The_Bacon_One.jpg", "tag": "CROCANTE"},
+    {"name": "The Double One", "price": "R$ 53,90", "desc": "Dois blends suculentos de 180g (total 360g de carne), queijo cheddar duplo e maionese artesanal da casa.", "photo": "photos/menu/The_Double_One.jpg", "tag": "SUPER FOME"},
+    {"name": "The Chicken Crispy", "price": "R$ 42,90", "desc": "Filé de frango super empanado e crocante, cheddar cremoso, alface fresco e molho leve da casa.", "photo": "photos/menu/The_Chicken_Crispy.jpg", "tag": "NOVIDADE"},
+    {"name": "Pizza Média 30cm", "price": "R$ 55,00", "desc": "Pizza de massa artesanal (8 fatias), equilibrada e perfeita para compartilhar com amigos.", "photo": "photos/menu/Pizza_Media_30cm.jpg", "tag": "PARA DIVIDIR"},
+    {"name": "Mini Pastéis (12 un)", "price": "R$ 33,00", "desc": "Porção com 12 unidades de mini pastéis deliciosos preparados e fritos na hora.", "photo": "photos/menu/Mini_Pasteis.jpg", "tag": "FRITOS NA HORA"},
+    {"name": "Batata Frita", "price": "R$ 30,00", "desc": "Batatas finas e crocantes na medida certa.", "photo": "photos/menu/Batata_Frita.jpg", "tag": "CLÁSSICO"}
+  ],
+  "logo": "photos/menu/logo.png"
+}
